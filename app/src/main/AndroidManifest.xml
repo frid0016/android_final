@@ -40,7 +40,8 @@
         <activity android:name=".GarageLightActivity" />
         <activity android:name=".HouseActivity" />
         <activity android:name=".HouseTemperatureActivity" />
-        <activity android:name=".OutsideWeatherActivity"></activity>
+        <activity android:name=".OutsideWeatherActivity" />
+        <activity android:name=".LoloActivity"></activity>
     </application>
 
 </manifest>
