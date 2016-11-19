@@ -31,4 +31,12 @@
         android:layout_alignEnd="@+id/switch1"
         android:layout_marginEnd="15dp" />
 
+    <Button
+        android:text="Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/button12"
+        android:id="@+id/button13" />
+
 </RelativeLayout>
