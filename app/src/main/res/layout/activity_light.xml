@@ -29,13 +29,4 @@
         android:layout_marginTop="42dp"
         android:id="@+id/spinner" />
 
-    <CheckBox
-        android:text="CheckBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/switch1"
-        android:layout_alignEnd="@+id/switch1"
-        android:layout_marginTop="97dp"
-        android:id="@+id/checkBox6" />
-
 </RelativeLayout>
