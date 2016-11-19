@@ -41,7 +41,6 @@
         <activity android:name=".HouseActivity" />
         <activity android:name=".HouseTemperatureActivity" />
         <activity android:name=".OutsideWeatherActivity" />
-        <activity android:name=".Lele"></activity>
     </application>
 
 </manifest>
