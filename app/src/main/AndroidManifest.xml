@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="nineseven.groupproject">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".LaunchScreenActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".KitchenActivity"
+            android:label="@string/title_activity_kitchen"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".MicrowaveActivity" />
+        <activity android:name=".FridgeActivity" />
+        <activity android:name=".LightActivity" />
+        <activity android:name=".AutomobileActivity" />
+        <activity android:name=".FuelActivity" />
+        <activity android:name=".TemperatureActivity" />
+        <activity android:name=".LightsActivity" />
+        <activity android:name=".RadioActivity" />
+        <activity android:name=".GPSActivity" />
+        <activity android:name=".OdometerActivity" />
+        <activity android:name=".LivingRoomActivity" />
+        <activity android:name=".BlindsActivity" />
+        <activity android:name=".Lamp" />
+        <activity android:name=".TelevisionActivity" />
+        <activity android:name=".GarageDoorActivity" />
+        <activity android:name=".GarageLightActivity" />
+        <activity android:name=".HouseActivity" />
+        <activity android:name=".HouseTemperatureActivity" />
+        <activity android:name=".OutsideWeatherActivity"></activity>
+    </application>
+
+</manifest>
