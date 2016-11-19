@@ -39,4 +39,13 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="76dp"
         android:id="@+id/checkBox3" />
+
+    <RadioButton
+        android:text="RadioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button9"
+        android:layout_toStartOf="@+id/checkBox3"
+        android:layout_marginBottom="33dp"
+        android:id="@+id/radioButton" />
 </RelativeLayout>
