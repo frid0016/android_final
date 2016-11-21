@@ -45,4 +45,12 @@
         android:layout_toEndOf="@+id/textView2"
         android:layout_marginTop="27dp"
         android:id="@+id/button2" />
+
+    <Button
+        android:text="test Anastasia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignEnd="@+id/switch3"
+        android:id="@+id/button10" />
 </RelativeLayout>
