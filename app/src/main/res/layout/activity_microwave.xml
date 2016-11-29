@@ -11,34 +11,6 @@
     tools:context="nineseven.groupproject.MicrowaveActivity">
 
     <TextView
-        android:text="How long to heat ?"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="55dp"
-        android:id="@+id/textView"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="10"
-        android:layout_below="@+id/textView"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/editText"
-        android:hint="enter number of minutes" />
-
-    <Button
-        android:text="Start"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/editText"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/button" />
-
-    <TextView
         android:text="28-Nov-2016 - 7:35 pm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
