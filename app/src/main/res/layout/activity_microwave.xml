@@ -37,4 +37,14 @@
         android:layout_below="@+id/editText"
         android:layout_centerHorizontal="true"
         android:id="@+id/button" />
+
+    <TextView
+        android:text="28-Nov-2016 - 7:35 pm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="112dp"
+        android:id="@+id/textView14"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 </RelativeLayout>
