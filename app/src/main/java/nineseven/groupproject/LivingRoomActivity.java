@@ -1,6 +1,10 @@
 package nineseven.groupproject;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.res.Configuration;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -9,6 +13,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 public class LivingRoomActivity extends AppCompatActivity {
     ListView listView;
@@ -27,21 +32,48 @@ public class LivingRoomActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                switch (position) {
-                    case 0:
-                        Intent lamp = new Intent(LivingRoomActivity.this, Lamp.class);
-                        startActivity(lamp);
-                        break;
+                //Context appContext = getApplicationContext();
+                Configuration configuration = getResources().getConfiguration();
+                if(configuration.orientation == Configuration.ORIENTATION_PORTRAIT) {
 
-                    case 1:
-                        Intent tv = new Intent(LivingRoomActivity.this, TelevisionActivity.class);
-                        startActivity(tv);
-                        break;
+                    switch (position) {
+                        case 0:
+                            Intent lamp = new Intent(LivingRoomActivity.this, Lamp.class);
+                            startActivity(lamp);
+                            break;
 
-                    case 2:
-                        Intent blinds = new Intent(LivingRoomActivity.this, BlindsActivity.class);
-                        startActivity(blinds);
-                        break;
+                        case 1:
+                            Intent tv = new Intent(LivingRoomActivity.this, TelevisionActivity.class);
+                            startActivity(tv);
+                            break;
+
+                        case 2:
+                            Intent blinds = new Intent(LivingRoomActivity.this, BlindsActivity.class);
+                            startActivity(blinds);
+                            break;
+                    }
+                }
+                else {
+                    if (configuration.orientation == Configuration.ORIENTATION_LANDSCAPE){
+
+                        //FragmentManager fragmentManager = getSupportFragmentManager();
+                        //Fragment fragment = (Fragment) fragmentManager.findFragmentById(R.id.fragment4);
+
+                        switch (position) {
+                            case 0:
+                                TextView text = (TextView)findViewById(R.id.description);
+                                text.setText("Contains 3 lamps: simple lamp, dimmable light and smart light");
+                                break;
+                            case 1:
+                                TextView text1 = (TextView)findViewById(R.id.description);
+                                text1.setText("Interface for turning on/off the TV, channel entry and a direction pad");
+                                break;
+                            case 2:
+                                TextView text3 = (TextView)findViewById(R.id.description);
+                                text3.setText("Smart window blinds");
+                                break;
+                        }
+                    }
                 }
             }
         });
