@@ -10,11 +10,13 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="nineseven.groupproject.Lamp">
 
-    <Switch
-        android:text="Turn on/off"
+
+    <fragment
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:name="nineseven.groupproject.Lamp_Fragment"
+        android:id="@+id/fragment5"
+        tools:layout="@layout/lamp_fragment"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:id="@+id/switch2" />
+        android:layout_alignParentStart="true" />
 </RelativeLayout>

@@ -1,17 +1,18 @@
 package nineseven.groupproject;
 
+import android.app.Fragment;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class LivingRoom_Fragment2 extends Fragment{
+public class Lamp_Fragment extends Fragment {
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        //return super.onCreateView(inflater, container, savedInstanceState);
-        View rootView = inflater.inflate(R.layout.living_room_fragment2, container, false);
-        return rootView;
+        View view = inflater.inflate(R.layout.lamp_fragment, null);
+        return view;
     }
+
 }

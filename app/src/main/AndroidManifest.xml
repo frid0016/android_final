@@ -33,7 +33,6 @@
         <activity android:name=".GPSActivity" />
         <activity android:name=".OdometerActivity" />
         <activity android:name=".LivingRoomActivity" />
-        <activity android:name=".BlindsActivity" />
         <activity android:name=".Lamp" />
         <activity android:name=".TelevisionActivity" />
         <activity android:name=".GarageDoorActivity" />
@@ -41,6 +40,7 @@
         <activity android:name=".HouseActivity" />
         <activity android:name=".HouseTemperatureActivity" />
         <activity android:name=".OutsideWeatherActivity" />
+        <activity android:name=".BlindsActivity"></activity>
     </application>
 
 </manifest>

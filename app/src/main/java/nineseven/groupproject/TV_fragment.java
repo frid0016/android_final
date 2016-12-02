@@ -1,17 +1,19 @@
 package nineseven.groupproject;
 
+import android.app.Fragment;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class Television_Fragment1 extends Fragment {
+
+public class TV_fragment extends Fragment {
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        //return super.onCreateView(inflater, container, savedInstanceState);
-        View rootView = inflater.inflate(R.layout.television_fragment1, container, false);
-        return rootView;
+        View view = inflater.inflate(R.layout.tv_fragment, null);
+        return view;
     }
+
 }

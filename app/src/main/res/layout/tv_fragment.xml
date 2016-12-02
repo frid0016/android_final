@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:orientation="vertical" android:layout_width="250dp"
+    android:id="@+id/fragment1"
     android:layout_height="match_parent">
+
 
     <Switch
         android:text="Turn on/off"
@@ -30,4 +32,12 @@
         android:id="@+id/editText2"
         android:hint="1-25" />
 
+    <Button
+        android:text="ENTER"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText2"
+        android:layout_toEndOf="@+id/textView2"
+        android:layout_marginTop="27dp"
+        android:id="@+id/button2" />
 </LinearLayout>

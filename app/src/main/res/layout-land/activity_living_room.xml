@@ -17,23 +17,28 @@
         android:background="?attr/colorPrimary"
         app:popupTheme="@style/AppTheme.PopupOverlay" />
 
-    <fragment
-        android:layout_width="400dp"
-        android:name="nineseven.groupproject.LivingRoom_Fragment1"
-        android:id="@+id/fragment3"
-        tools:layout="@layout/living_room_fragment1"
-        android:layout_weight="0.52"
-        android:layout_height="450dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout">
 
-    <fragment
-        android:layout_width="150dp"
-        android:layout_height="450dp"
-        android:name="nineseven.groupproject.LivingRoom_Fragment2"
-        android:id="@+id/fragment4"
-        tools:layout="@layout/living_room_fragment2"
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="250dp"
+        android:layout_height="match_parent"
         android:layout_alignParentEnd="true"
-        android:layout_toEndOf="@+id/fragment3"
-        android:layout_below="@+id/Living_Room_Toolbar" />
+        android:layout_below="@+id/Living_Room_Toolbar">
+    </FrameLayout>
+
+    <ListView
+        android:layout_width="300dp"
+        android:id="@+id/Living_Room_List"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_height="250dp" />
 
 
 </RelativeLayout>
