@@ -1,20 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:weightSum="1">
 
-    <Switch
-        android:text="Lamp ON"
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBar_lamp"
+        android:layout_weight="0.05"
+        android:max="120"
+        android:progress="60"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="39dp"
+        android:layout_below="@+id/lamp1"
+        android:layout_toEndOf="@+id/lamp2" />
+
+    <Button
+        android:text="RED"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/red_light"
+        android:layout_alignTop="@+id/lamp3"
+        android:layout_alignStart="@+id/seekBar_lamp" />
+
+    <Button
+        android:text="PURPLE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/blue_light"
+        android:layout_alignStart="@+id/green_light"
+        android:id="@+id/purple_light" />
+
+    <Button
+        android:text="GREEN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/green_light"
+        android:layout_alignBaseline="@+id/red_light"
+        android:layout_alignBottom="@+id/red_light"
+        android:layout_toEndOf="@+id/red_light" />
+
+    <Button
+        android:text="BLUE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/blue_light"
+        android:layout_below="@+id/lamp3"
+        android:layout_toStartOf="@+id/purple_light" />
+
+    <ImageView
+        android:layout_width="50dp"
+        app:srcCompat="@drawable/lamp"
+        android:id="@+id/lamp1"
+        android:layout_height="50dp"
+        android:layout_marginTop="14dp"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:id="@+id/switch2" />
+        android:layout_alignParentStart="true" />
 
     <Switch
-        android:text="Lamp OFF"
-        android:layout_width="100dp"
+        android:text="Lamp OFF/ON"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/switch4" />
+        android:id="@+id/switch_lamp"
+        android:layout_alignTop="@+id/lamp1"
+        android:layout_alignStart="@+id/seekBar_lamp"
+        android:layout_marginTop="11dp" />
 
-</LinearLayout>
+    <ImageView
+        app:srcCompat="@drawable/lamp"
+        android:id="@+id/lamp3"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/lamp2"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        app:srcCompat="@drawable/lamp"
+        android:id="@+id/lamp2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@+id/seekBar_lamp"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

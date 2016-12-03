@@ -10,6 +10,7 @@ import android.content.res.Configuration;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
@@ -34,6 +35,8 @@ public class LivingRoomActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_living_room);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.Living_Room_Toolbar);
+        setSupportActionBar(toolbar);
 
         container = (FrameLayout) findViewById(R.id.container);
         listView = (ListView) findViewById(R.id.Living_Room_List);
@@ -73,10 +76,12 @@ public class LivingRoomActivity extends AppCompatActivity {
                             if (lamp2 == null) {
                                 FragmentTransaction fragmentTransaction = myFragmentManager.beginTransaction();
                                 fragmentTransaction.add(R.id.container, lamp);
+
                                 fragmentTransaction.commit();
                             } else{
                                 FragmentTransaction fragmentTransaction = myFragmentManager.beginTransaction();
                                 fragmentTransaction.replace(R.id.container, lamp);
+                                fragmentTransaction.addToBackStack(null);
                                 fragmentTransaction.commit();
                             }
 

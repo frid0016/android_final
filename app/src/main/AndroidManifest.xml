@@ -32,7 +32,9 @@
         <activity android:name=".RadioActivity" />
         <activity android:name=".GPSActivity" />
         <activity android:name=".OdometerActivity" />
-        <activity android:name=".LivingRoomActivity" />
+        <activity android:name=".LivingRoomActivity"
+                  android:label=""
+                  android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".Lamp" />
         <activity android:name=".TelevisionActivity" />
         <activity android:name=".GarageDoorActivity" />
