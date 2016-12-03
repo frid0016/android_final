@@ -1,30 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <ImageView
-        android:id="@+id/weatherForecastImgView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:minHeight="200dp"
-        android:minWidth="200dp"
-        android:layout_above="@+id/curTempTxtView"
-        android:layout_alignEnd="@+id/maxTempTxtView"
-        android:layout_marginEnd="43dp"
-        android:layout_marginBottom="90dp" />
-
-    <ProgressBar
-        android:id="@+id/weatherProgBar"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="102dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="24dp"
-        android:layout_marginTop="14dp"
-        android:visibility="invisible" />
+    android:layout_height="match_parent"
+    android:weightSum="1">
 
     <TextView
         android:id="@+id/minTempTxtView"
@@ -37,22 +17,53 @@
         android:layout_alignParentStart="true" />
 
     <TextView
+        android:id="@+id/maxTempTxtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="50dp"
+        android:minWidth="200dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
         android:id="@+id/curTempTxtView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:minHeight="50dp"
         android:minWidth="200dp"
         android:layout_above="@+id/minTempTxtView"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="13dp" />
 
-    <TextView
-        android:id="@+id/maxTempTxtView"
+    <ImageView
+        android:id="@+id/weatherForecastImgView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:minHeight="50dp"
+        android:minHeight="200dp"
         android:minWidth="200dp"
-        android:layout_marginBottom="45dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true" />
+        android:layout_above="@+id/curTempTxtView"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="16dp" />
 
-</LinearLayout>
+    <ProgressBar
+        android:id="@+id/weatherProgBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="102dp"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:layout_above="@+id/weatherForecastImgView"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="14dp" />
+
+    <TextView
+        android:text="OUTSIDE TEMPERATURE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="13dp"
+        android:id="@+id/textView16"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
+
+</RelativeLayout>
