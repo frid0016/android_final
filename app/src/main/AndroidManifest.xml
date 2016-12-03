@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="nineseven.groupproject">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -39,7 +41,10 @@
         <activity android:name=".TelevisionActivity" />
         <activity android:name=".GarageDoorActivity" />
         <activity android:name=".GarageLightActivity" />
-        <activity android:name=".HouseActivity" />
+        <activity
+            android:name=".HouseActivity"
+            android:label=""
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".HouseTemperatureActivity" />
         <activity android:name=".OutsideWeatherActivity" />
         <activity android:name=".BlindsActivity"></activity>

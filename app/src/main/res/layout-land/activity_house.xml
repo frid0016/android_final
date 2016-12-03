@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,7 +6,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="nineseven.groupproject.HouseActivity">
+    tools:context="nineseven.groupproject.HouseActivity"
+    android:orientation="vertical"
+    android:weightSum="1">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/House_Toolbar"
@@ -16,10 +17,26 @@
         android:background="?attr/colorPrimary"
         app:popupTheme="@style/AppTheme.PopupOverlay" />
 
-    <ListView
+    <LinearLayout
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout">
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="250dp"
         android:layout_height="match_parent"
-        android:layout_below="@+id/House_Toolbar"
-        android:id="@+id/House_List_View" />
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/House_Toolbar">
+    </FrameLayout>
+
+    <ListView
+        android:layout_width="300dp"
+        android:id="@+id/House_List_View"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_height="250dp" />
 
 </RelativeLayout>
