@@ -21,12 +21,9 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".KitchenActivity"
+            android:name=".Kitchen_Activity"
             android:label="@string/title_activity_kitchen"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".MicrowaveActivity" />
-        <activity android:name=".FridgeActivity" />
-        <activity android:name=".LightActivity" />
         <activity android:name=".AutomobileActivity" />
         <activity android:name=".FuelActivity" />
         <activity android:name=".TemperatureActivity" />
@@ -34,9 +31,10 @@
         <activity android:name=".RadioActivity" />
         <activity android:name=".GPSActivity" />
         <activity android:name=".OdometerActivity" />
-        <activity android:name=".LivingRoomActivity"
-                  android:label=""
-                  android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".LivingRoomActivity"
+            android:label=""
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Lamp" />
         <activity android:name=".TelevisionActivity" />
         <activity android:name=".GarageDoorActivity" />
@@ -44,10 +42,13 @@
         <activity
             android:name=".HouseActivity"
             android:label=""
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".HouseTemperatureActivity" />
         <activity android:name=".OutsideWeatherActivity" />
-        <activity android:name=".BlindsActivity"></activity>
+        <activity android:name=".BlindsActivity" />
+        <activity android:name=".Microwave_Activity" />
+        <activity android:name=".Fridge_Activity" />
+        <activity android:name=".Kitchen_Light_Activity"></activity>
     </application>
 
 </manifest>
