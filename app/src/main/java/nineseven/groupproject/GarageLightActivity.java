@@ -47,7 +47,7 @@ public class GarageLightActivity extends AppCompatActivity {
                 builder = new AlertDialog.Builder(this);
                 LayoutInflater inflater = this.getLayoutInflater();
                 builder.setTitle(R.string.dialog_help_title);
-                builder.setView(inflater.inflate(R.layout.dialog_house, null))
+                builder.setView(inflater.inflate(R.layout.dialog_garage_light, null))
                         .setNegativeButton(R.string.dialog_help_button, new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
                                 // User clicked OK
