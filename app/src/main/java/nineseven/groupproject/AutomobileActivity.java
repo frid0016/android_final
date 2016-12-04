@@ -3,6 +3,7 @@ package nineseven.groupproject;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.View;
 import android.widget.AdapterView;
@@ -16,6 +17,9 @@ public class AutomobileActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_automobile);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.automobile_Toolbar);
+        setSupportActionBar(toolbar);
 
         listView = (ListView) findViewById(R.id.Automobile_List_View);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, Automobile);

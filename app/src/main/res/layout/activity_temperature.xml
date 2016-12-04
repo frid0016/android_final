@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_temperature"
     android:layout_width="match_parent"
@@ -10,38 +11,61 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="nineseven.groupproject.TemperatureActivity">
 
-    <TextView
-        android:text="Temperature in front of the car is:"
+    <Button
+        android:text="SET"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView3"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignEnd="@+id/textView5" />
+        android:layout_height="30dp"
+        android:id="@+id/button_back"
+        android:layout_toEndOf="@+id/car_temp2"
+        android:layout_alignBottom="@+id/car_back_temp"
+        android:layout_below="@+id/car_temp2" />
 
     <TextView
-        android:text="Temperature in the back of the car is:"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView5"
-        android:layout_below="@+id/textView3"
-        android:layout_alignEnd="@+id/textView4" />
-
-    <TextView
-        android:text="TextView"
+        android:text="Set temperature in the front:"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:id="@+id/textView6"
-        android:layout_alignParentEnd="true"
-        android:layout_toEndOf="@+id/textView3" />
+        android:layout_alignParentStart="true"
+        android:id="@+id/car_temp1"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+
+    <EditText
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/car_front_temp"
+        android:hint="front temp"
+        android:layout_width="150dp"
+        android:layout_below="@+id/car_temp1"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/car_back_temp"
+        android:hint="back temp"
+        android:layout_width="150dp"
+        android:layout_below="@+id/car_temp2"
+        android:layout_alignParentStart="true" />
 
     <TextView
-        android:text="        TextView"
+        android:text="Set temperature in the back:"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView6"
-        android:layout_alignParentEnd="true"
-        android:id="@+id/textView7"
-        android:layout_toEndOf="@+id/textView3" />
+        android:id="@+id/car_temp2"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/car_front_temp"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="SET"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:id="@+id/button_front"
+        android:layout_above="@+id/car_temp2"
+        android:layout_toEndOf="@+id/car_temp1"
+        android:layout_below="@+id/car_temp1" />
+
 </RelativeLayout>
