@@ -24,7 +24,9 @@
             android:name=".Kitchen_Activity"
             android:label="@string/title_activity_kitchen"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".AutomobileActivity" />
+        <activity android:name=".AutomobileActivity"
+            android:label=""
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".FuelActivity" />
         <activity android:name=".TemperatureActivity" />
         <activity android:name=".LightsActivity" />
