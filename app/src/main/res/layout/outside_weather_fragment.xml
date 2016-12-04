@@ -7,55 +7,6 @@
     android:weightSum="1">
 
     <TextView
-        android:id="@+id/minTempTxtView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:minHeight="50dp"
-        android:minWidth="200dp"
-        android:layout_marginBottom="11dp"
-        android:layout_above="@+id/maxTempTxtView"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:id="@+id/maxTempTxtView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:minHeight="50dp"
-        android:minWidth="200dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:id="@+id/curTempTxtView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:minHeight="50dp"
-        android:minWidth="200dp"
-        android:layout_above="@+id/minTempTxtView"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="13dp" />
-
-    <ImageView
-        android:id="@+id/weatherForecastImgView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:minHeight="200dp"
-        android:minWidth="200dp"
-        android:layout_above="@+id/curTempTxtView"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="16dp" />
-
-    <ProgressBar
-        android:id="@+id/weatherProgBar"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="102dp"
-        android:layout_height="wrap_content"
-        android:visibility="invisible"
-        android:layout_above="@+id/weatherForecastImgView"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="14dp" />
-
-    <TextView
         android:text="OUTSIDE TEMPERATURE"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -65,5 +16,55 @@
         android:layout_marginTop="13dp"
         android:id="@+id/textView16"
         android:textAppearance="@style/TextAppearance.AppCompat.Button" />
+
+    <ProgressBar
+        android:id="@+id/weatherProgBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="102dp"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:layout_below="@+id/textView16"
+        android:layout_alignStart="@+id/textView16"
+        android:layout_marginTop="28dp" />
+
+    <ImageView
+        android:id="@+id/weatherForecastImgView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="200dp"
+        android:minWidth="200dp"
+        android:layout_marginTop="19dp"
+        android:layout_below="@+id/weatherProgBar"
+        android:layout_alignStart="@+id/weatherProgBar" />
+
+    <TextView
+        android:id="@+id/curTempTxtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="50dp"
+        android:minWidth="200dp"
+        android:layout_below="@+id/weatherForecastImgView"
+        android:layout_alignStart="@+id/weatherForecastImgView"
+        android:layout_marginTop="12dp" />
+
+    <TextView
+        android:id="@+id/minTempTxtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="50dp"
+        android:minWidth="200dp"
+        android:layout_below="@+id/curTempTxtView"
+        android:layout_alignStart="@+id/curTempTxtView"
+        android:layout_marginTop="11dp" />
+
+    <TextView
+        android:id="@+id/maxTempTxtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="50dp"
+        android:minWidth="200dp"
+        android:layout_below="@+id/minTempTxtView"
+        android:layout_alignStart="@+id/minTempTxtView"
+        android:layout_marginTop="11dp" />
 
 </RelativeLayout>
