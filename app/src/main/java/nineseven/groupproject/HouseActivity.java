@@ -1,30 +1,22 @@
 package nineseven.groupproject;
 
-import android.app.Activity;
-import android.app.Dialog;
-import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Configuration;
-import android.support.design.widget.Snackbar;
+import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ListView;
-import android.widget.Toast;
 
 public class HouseActivity extends AppCompatActivity {
     ListView listView;
@@ -157,7 +149,7 @@ public class HouseActivity extends AppCompatActivity {
                 startActivity(livingRoomIntent);
                 break;
             case R.id.Kitchen_Menu_Item:
-                Intent kitchenIntent = new Intent(HouseActivity.this, KitchenActivity.class);
+                Intent kitchenIntent = new Intent(HouseActivity.this, Kitchen_Activity.class);
                 startActivity(kitchenIntent);
                 break;
             case R.id.Automobile_Menu_Item:

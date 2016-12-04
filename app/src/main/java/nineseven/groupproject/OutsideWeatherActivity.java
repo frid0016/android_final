@@ -6,10 +6,10 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
+import android.os.Bundle;
 import android.os.SystemClock;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.Log;
 import android.util.Xml;
 import android.view.LayoutInflater;
@@ -19,26 +19,24 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
+
 import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.ProtocolException;
 import java.net.URL;
-import static android.R.attr.max;
 
 public class OutsideWeatherActivity extends AppCompatActivity {
 
-    protected static final String ACTIVITY_NAME = "OutsideWeatherActivity";
     public static final String URL_STRING =
             "http://api.openweathermap.org/data/2.5/weather?q=ottawa,ca&APPID=d99666875e0e51521f0040a3d97d0f6a&mode=xml&units=metric";
+    protected static final String ACTIVITY_NAME = "OutsideWeatherActivity";
     ProgressBar pBar;
 
     @Override
@@ -71,7 +69,7 @@ public class OutsideWeatherActivity extends AppCompatActivity {
                 startActivity(livingRoomIntent);
                 break;
             case R.id.Kitchen_Menu_Item:
-                Intent kitchenIntent = new Intent(OutsideWeatherActivity.this, KitchenActivity.class);
+                Intent kitchenIntent = new Intent(OutsideWeatherActivity.this, Kitchen_Activity.class);
                 startActivity(kitchenIntent);
                 break;
             case R.id.Automobile_Menu_Item:
