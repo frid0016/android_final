@@ -1,15 +1,53 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFF00"
     tools:context="nineseven.groupproject.Microwave_Fragment">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="Microwave Fragment"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
-</FrameLayout>
+    <EditText
+        android:id="@+id/Cooking_Time_Input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="enter cooking time"
+        android:inputType="time" />
+
+    <Button
+        android:id="@+id/Stop_Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/Reset_Button"
+        android:layout_below="@+id/Reset_Button"
+        android:layout_marginTop="13dp"
+        android:text="STOP" />
+
+    <Button
+        android:id="@+id/Start_Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/Stop_Button"
+        android:layout_below="@+id/Stop_Button"
+        android:layout_marginTop="12dp"
+        android:text="START" />
+
+    <Button
+        android:id="@+id/Reset_Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/Cooking_Time_Input"
+        android:layout_below="@+id/Cooking_Time_Input"
+        android:layout_marginTop="81dp"
+        android:text="RESET" />
+
+    <TextView
+        android:id="@+id/Time_Remaining_View"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/Reset_Button"
+        android:layout_below="@+id/Cooking_Time_Input"
+        android:layout_marginTop="20dp" />
+
+
+</RelativeLayout>
