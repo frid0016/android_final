@@ -47,6 +47,7 @@ public class GarageDoorActivity extends AppCompatActivity {
         return true;
     } // end of method onCreateOptionsMenu
 
+/*
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         AlertDialog.Builder builder;
@@ -83,5 +84,6 @@ public class GarageDoorActivity extends AppCompatActivity {
         }
         return true;
     }
+*/
 
 }
