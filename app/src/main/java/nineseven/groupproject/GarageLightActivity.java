@@ -3,19 +3,54 @@ package nineseven.groupproject;
 import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Color;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.CompoundButton;
+import android.widget.ImageView;
+import android.widget.Switch;
+import android.widget.Toast;
+
+import static android.R.attr.bitmap;
 
 public class GarageLightActivity extends AppCompatActivity {
+
+    ImageView glImageView;
+    Bitmap glBitmap;
+    Switch glSwitch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_garage_light);
+
+        glBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.lamp);
+        glImageView =(ImageView)findViewById(R.id.glImageView);
+        glImageView.setImageBitmap(glBitmap);
+        glImageView.setColorFilter(Color.parseColor("#99000000"));
+        glSwitch = (Switch) findViewById(R.id.glSwitch);
+
+        glSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked){
+                    int color = Color.parseColor("#80ffff00");
+                    glImageView.setColorFilter(color);
+                }
+                else{
+                    int color = Color.parseColor("#90000000");
+                    glImageView.setColorFilter(color);
+                }
+            }
+        });
+
     }
 
     @Override
