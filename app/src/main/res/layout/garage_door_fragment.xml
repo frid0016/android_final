@@ -18,16 +18,6 @@
         android:layout_marginStart="11dp" />
 
     <Button
-        android:text="Open"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/gdTextView"
-        android:layout_toEndOf="@+id/gdTextView"
-        android:layout_marginStart="93dp"
-        android:layout_marginTop="111dp"
-        android:id="@+id/gdOpenButton" />
-
-    <Button
         android:text="Close"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -35,15 +25,6 @@
         android:layout_alignStart="@+id/gdOpenButton"
         android:layout_marginTop="16dp"
         android:id="@+id/gdCloseButton" />
-
-    <Button
-        android:text="Stop"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/gdCloseButton"
-        android:layout_marginBottom="104dp"
-        android:id="@+id/gdStopButton" />
 
     <TextView
         android:text="Opened"
@@ -62,6 +43,25 @@
         android:layout_alignStart="@+id/openedTextView"
         android:layout_marginBottom="27dp"
         android:id="@+id/closedTextView" />
+
+    <Button
+        android:text="Open"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="37dp"
+        android:id="@+id/gdOpenButton"
+        android:layout_below="@+id/gdTextView"
+        android:layout_toEndOf="@+id/gdTextView" />
+
+    <Button
+        android:text="Stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/gdStopButton"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/gdCloseButton"
+        android:layout_alignStart="@+id/gdCloseButton" />
 
 
 </RelativeLayout>
