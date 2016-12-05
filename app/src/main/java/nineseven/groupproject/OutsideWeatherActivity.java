@@ -56,7 +56,6 @@ public class OutsideWeatherActivity extends AppCompatActivity {
         return true;
     } // end of method onCreateOptionsMenu
 
-/*
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         AlertDialog.Builder builder;
@@ -93,7 +92,6 @@ public class OutsideWeatherActivity extends AppCompatActivity {
         }
         return true;
     }
-*/
 
     public class ForecastQuery extends AsyncTask<String, Integer, String> {
 
