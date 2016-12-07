@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 
+<!--
+File: activity_garage.xml
+Course: CST2335
+Lab Sections: 013 & 015
+Author: Michael Palmer
+Date: Dec 2017
+Description: Final Project
+-->
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_garage_door"
@@ -9,12 +18,12 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="nineseven.groupproject.GarageDoorActivity">
+    tools:context="nineseven.groupproject.GarageActivity">
 
     <fragment
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:name="nineseven.groupproject.Garage_Door_Fragment"
+        android:name="nineseven.groupproject.Garage_Fragment"
         android:id="@+id/fragment1"
         tools:layout="@layout/garage_door_fragment"
         android:layout_alignParentTop="true"

@@ -6,9 +6,20 @@
     <string name="dialog_help_title">Help</string>
     <string name="dialog_help_button">OK</string>
     <string name="dialog_house_text">"\n Author: Michael Palmer \n Version: 1 \n Instructions: \n Click on setting to see detailed controls.</string>
-    <string name="dialog_garage_door_text">"\n Author: Michael Palmer \n Version: 1 \n Instructions: \n Click 'Open' button to open garage door. \n Click 'Close' button to close garage door. \n Click 'Stop' button to stop garage door.</string>
-    <string name="dialog_garage_light_text">"\n Author: Michael Palmer \n Version: 1 \n Instructions: \n Click 'Off' button to turn off garage light. \n Click 'On' button to turn on garage light.</string>
+    <string name="dialog_garage_text">"\n Author: Michael Palmer \n Version: 1 \n Instructions: \n Click 'Off' button to turn off garage light. \n Click 'On' button to turn on garage light. \n Click 'Open' button to open garage door. \n Click 'Close' button to close garage door.</string>
     <string name="dialog_house_temperature_text">"\n Author: Michael Palmer \n Version: 1 \n Instructions: \n Click 'Set' button to set house temperature.</string>
     <string name="dialog_outside_weather_text">"\n Author: Michael Palmer \n Version: 1 \n Instructions: \n Progress bar shows progress of outside weather download. \n Current, Minimum, and Maximum Outside Temperatures are populated.</string>
-    <string name="gl_switch_text">OFF / ON</string>
+    <string name="garageDoorTitle">Garage Door</string>
+    <string name="gdCloseButton">Close</string>
+    <string name="gdStopButton">Stop</string>
+    <string name="gdOpenButton">Open</string>
+    <string name="gdOpenedTextView">Opened</string>
+    <string name="gdClosedTextView">Closed</string>
+    <string name="garageLightTitle">Garage Light</string>
+    <string name="glSwitchText">OFF / ON</string>
+    <string name="houseTemperatureTitle">House Temperature</string>
+    <string name="htSetTemperatureTextView">Set temperature: </string>
+    <string name="htSetButton">Set</string>
+    <string name="htHintEditText">enter number in °C</string>
+    <string name="outsideWeatherTitle">Outside Weather</string>
 </resources>

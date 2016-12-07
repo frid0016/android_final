@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 
+<!--
+File: garage_fragment.xml
+Course: CST2335
+Lab Sections: 013 & 015
+Author: Michael Palmer
+Date: Dec 2017
+Description: Final Project
+-->
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical" android:layout_width="match_parent"
@@ -7,61 +16,61 @@
     android:weightSum="1">
 
     <TextView
-        android:text="Garage Door"
+        android:text="@string/garageLightTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="11dp"
+        android:id="@+id/textView15"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
+
+    <TextView
+        android:text="@string/garageDoorTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/gdTextView"
         android:textAppearance="@style/TextAppearance.AppCompat.Button"
-        android:layout_marginTop="10dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="11dp" />
+        android:layout_below="@+id/glImageView"
+        android:layout_alignStart="@+id/textView15"
+        android:layout_marginTop="35dp" />
+
+    <ImageView
+        android:layout_width="50dp"
+        app:srcCompat="@drawable/lamp"
+        android:id="@+id/glImageView"
+        android:layout_height="50dp"
+        android:layout_marginTop="23dp"
+        android:layout_below="@+id/textView15"
+        android:layout_alignStart="@+id/textView15" />
+
+    <Switch
+        android:text="@string/glSwitchText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/glSwitch"
+        android:layout_marginTop="11dp"
+        android:layout_alignTop="@+id/glImageView"
+        android:layout_toEndOf="@+id/glImageView"
+        android:layout_marginStart="33dp" />
 
     <Button
-        android:text="Close"
+        android:text="@string/gdOpenButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/gdOpenButton"
-        android:layout_alignStart="@+id/gdOpenButton"
-        android:layout_marginTop="16dp"
-        android:id="@+id/gdCloseButton" />
-
-    <TextView
-        android:text="Opened"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/gdOpenButton"
-        android:layout_alignStart="@+id/gdTextView"
-        android:layout_marginTop="12dp"
-        android:id="@+id/openedTextView" />
-
-    <TextView
-        android:text="Closed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/gdStopButton"
-        android:layout_alignStart="@+id/openedTextView"
-        android:layout_marginBottom="27dp"
-        android:id="@+id/closedTextView" />
-
-    <Button
-        android:text="Open"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="92dp"
-        android:layout_marginTop="37dp"
         android:id="@+id/gdOpenButton"
         android:layout_below="@+id/gdTextView"
-        android:layout_toEndOf="@+id/gdTextView" />
+        android:layout_toEndOf="@+id/glSwitch"
+        android:layout_marginTop="41dp" />
 
     <Button
-        android:text="Stop"
+        android:text="@string/gdCloseButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/gdStopButton"
-        android:layout_marginTop="40dp"
-        android:layout_below="@+id/gdCloseButton"
-        android:layout_alignStart="@+id/gdCloseButton" />
-
+        android:id="@+id/gdCloseButton"
+        android:layout_below="@+id/gdOpenButton"
+        android:layout_alignStart="@+id/gdOpenButton"
+        android:layout_marginTop="15dp" />
 
 </RelativeLayout>

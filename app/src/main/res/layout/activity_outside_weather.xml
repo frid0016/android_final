@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 
+<!--
+File: activity_outside_weather.xml
+Course: CST2335
+Lab Sections: 013 & 015
+Author: Michael Palmer
+Date: Dec 2017
+Description: Final Project
+-->
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_outside_weather"

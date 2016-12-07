@@ -1,3 +1,11 @@
+/* File: OutsideWeatherActivity.java
+ * Course: CST2335
+ * Lab Sections: 013 & 015
+ * Author: Michael Palmer
+ * Date: Dec 2017
+ * Description: Final Project
+ */
+
 package nineseven.groupproject;
 
 import android.content.Context;
@@ -19,10 +27,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
-
 import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.FileInputStream;
@@ -32,6 +38,9 @@ import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+/**
+ * This class extends AppCompatActivity and represents an outside weather activity.
+ */
 public class OutsideWeatherActivity extends AppCompatActivity {
 
     public static final String URL_STRING =
@@ -39,6 +48,11 @@ public class OutsideWeatherActivity extends AppCompatActivity {
     protected static final String ACTIVITY_NAME = "OutsideWeatherActivity";
     ProgressBar pBar;
 
+    /**
+     * This method initializes outside weather activity, sets layout, handles
+     * progress bar, instantiates and executes inner class ForecastQuery.
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,14 +62,25 @@ public class OutsideWeatherActivity extends AppCompatActivity {
         pBar.setVisibility(View.VISIBLE);
 
         new ForecastQuery().execute(URL_STRING);
-    }
+    } // end of method onCreate
 
+    /**
+     * This method inflates menu resource from xml layout.
+     * @param menu
+     * @return
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_launch_screen, menu);
         return true;
     } // end of method onCreateOptionsMenu
 
+    /**
+     * This method handles the case when an item ID is selected,
+     * inflates appropriate help dialog
+     * @param item
+     * @return
+     */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         AlertDialog.Builder builder;
@@ -91,10 +116,12 @@ public class OutsideWeatherActivity extends AppCompatActivity {
                 break;
         }
         return true;
-    }
+    } // end of method onOptionsItemSelected
 
+    /**
+     * This inner class extends AsyncTask and represents a forecast query
+     */
     public class ForecastQuery extends AsyncTask<String, Integer, String> {
-
         String curTemp;
         String minTemp;
         String maxTemp;
@@ -102,9 +129,13 @@ public class OutsideWeatherActivity extends AppCompatActivity {
         Bitmap curWeatherImg;
         InputStream inputStream;
 
+        /**
+         * This method handles the network connection in background.
+         * @param args
+         * @return
+         */
         @Override
         protected String doInBackground(String... args) {
-
             try {
                 URL url = new URL(URL_STRING);
                 HttpURLConnection conn = (HttpURLConnection) url.openConnection();
@@ -144,15 +175,6 @@ public class OutsideWeatherActivity extends AppCompatActivity {
                                 BufferedInputStream bufferedInputStream = new BufferedInputStream(fileInputStream);
                                 curWeatherImg = BitmapFactory.decodeStream(bufferedInputStream);
                                 bufferedInputStream.close();
-
-//                                FileInputStream inputStream = null;
-//                                try {
-//                                    inputStream = new FileInputStream(iconName + ".png");
-//                                } catch (FileNotFoundException e) {
-//                                    e.printStackTrace();
-//                                }
-//                                curWeatherImg = BitmapFactory.decodeStream(inputStream);
-
                                 SystemClock.sleep(1000);
                                 publishProgress(100);
                                 Log.i(ACTIVITY_NAME, "Found " + iconName + ".png locally");
@@ -171,22 +193,30 @@ public class OutsideWeatherActivity extends AppCompatActivity {
                     }
                     parser.next();
                 }
-
             } catch (IOException e) {
                 e.printStackTrace();
             } catch (XmlPullParserException e) {
                 e.printStackTrace();
             }
-
             return null;
-        }
+        } // end of method doInBackground
 
+        /**
+         * This method sets visibility of progressBar to visible, sets progress of progressBar
+         * to variable value[0] being passed in.
+         * @param value
+         */
         @Override
         protected void onProgressUpdate(Integer... value) {
             pBar.setVisibility(View.VISIBLE);
             pBar.setProgress(value[0]);
-        }
+        } // end of method onProgressUpdate
 
+        /**
+         * This method will update GUI components with min, max, and current temperature read from XML;
+         * update ImageView with Bitmap, and set visibility of progress bar to invisible.
+         * @param s
+         */
         @Override
         protected void onPostExecute(String s) {
             TextView curTempTxtView = (TextView) findViewById(R.id.curTempTxtView);
@@ -202,13 +232,17 @@ public class OutsideWeatherActivity extends AppCompatActivity {
             weatherForecastImgView.setImageBitmap(curWeatherImg);
 
             pBar.setVisibility(View.INVISIBLE);
-        }
+        } // end of method onPostExecute
 
+        /**
+         * This method checks if cloudy, sunny, raining images are already present in local storage directory.
+         * @param fname
+         * @return
+         */
         public boolean fileExistance(String fname) {
             File file = getBaseContext().getFileStreamPath(fname);
             return file.exists();
-        }
+        } // end of method fileExistance
 
-    }
-
-}
+    } // end of inner class ForecastQuery
+} // end of class OutsideWeatherActivity

@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!--
+File: dialog_outside_weather.xml
+Course: CST2335
+Lab Sections: 013 & 015
+Author: Michael Palmer
+Date: Dec 2017
+Description: Final Project
+-->
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"

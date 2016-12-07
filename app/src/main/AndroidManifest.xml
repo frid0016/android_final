@@ -40,8 +40,7 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Lamp" />
         <activity android:name=".TelevisionActivity" />
-        <activity android:name=".GarageDoorActivity" />
-        <activity android:name=".GarageLightActivity" />
+        <activity android:name=".GarageActivity" />
         <activity
             android:name=".HouseActivity"
             android:label=""

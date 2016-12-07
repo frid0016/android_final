@@ -1,3 +1,11 @@
+/* File: HTTPUtils.java
+ * Course: CST2335
+ * Lab Sections: 013 & 015
+ * Author: Michael Palmer
+ * Date: Dec 2017
+ * Description: Final Project
+ */
+
 package nineseven.groupproject;
 
 import android.graphics.Bitmap;
@@ -26,7 +34,7 @@ public class HTTPUtils {
                 connection.disconnect();
             }
         }
-    }
+    } // end of method getImage(URL url)
 
     public static Bitmap getImage(String urlString) {
         try {
@@ -35,6 +43,6 @@ public class HTTPUtils {
         } catch (MalformedURLException e) {
             return null;
         }
-    }
+    } // end of method getImage(String urlString)
 
-}
+} // end of class HTTPUtils
