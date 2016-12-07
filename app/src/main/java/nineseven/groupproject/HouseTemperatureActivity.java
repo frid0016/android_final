@@ -1,3 +1,11 @@
+/* File: HouseTemperatureActivity.java
+ * Course: CST2335
+ * Lab Sections: 013 & 015
+ * Author: Michael Palmer
+ * Date: Dec 2017
+ * Description: Final Project
+ */
+
 package nineseven.groupproject;
 
 import android.content.DialogInterface;
@@ -12,8 +20,16 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+/**
+ * This class extends AppCompatActivity and represents a house temperature activity.
+ */
 public class HouseTemperatureActivity extends AppCompatActivity {
 
+    /**
+     * This method initializes house temperature activity, sets layout, handles
+     * button click and toast.
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,14 +43,25 @@ public class HouseTemperatureActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "House temperature has been set", Toast.LENGTH_LONG).show();
             }
         });
-    }
+    } // end of method onCreate
 
+    /**
+     * This method inflates menu resource from xml layout.
+     * @param menu
+     * @return
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_launch_screen, menu);
         return true;
     } // end of method onCreateOptionsMenu
 
+    /**
+     * This method handles the case when an item ID is selected,
+     * inflates appropriate help dialog
+     * @param item
+     * @return
+     */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         AlertDialog.Builder builder;
@@ -70,6 +97,6 @@ public class HouseTemperatureActivity extends AppCompatActivity {
                 break;
         }
         return true;
-    }
+    } // end of method onOptionsItemSelected
 
-}
+} // end of class HouseTemperatureActivity

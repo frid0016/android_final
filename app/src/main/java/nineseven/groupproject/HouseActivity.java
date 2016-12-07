@@ -1,3 +1,11 @@
+/* File: HouseActivity.java
+ * Course: CST2335
+ * Lab Sections: 013 & 015
+ * Author: Michael Palmer
+ * Date: Dec 2017
+ * Description: Final Project
+ */
+
 package nineseven.groupproject;
 
 import android.app.FragmentManager;
@@ -20,12 +28,11 @@ import android.widget.ListView;
 
 public class HouseActivity extends AppCompatActivity {
     ListView listView;
-    String[] houseItems = {"Garage Door", "Garage Light", "House Temperature", "Outside Weather"};
+    String[] houseItems = {"Garage", "House Temperature", "Outside Weather"};
     FrameLayout container;
     FragmentManager myFragmentManager = getFragmentManager();
 
-    Garage_Door_Fragment GDFrag1 = new Garage_Door_Fragment();
-    Garage_Light_Fragment GLFrag1 = new Garage_Light_Fragment();
+    Garage_Fragment GDFrag1 = new Garage_Fragment();
     House_Temperature_Fragment HTFrag1 = new House_Temperature_Fragment();
     Outside_Weather_Fragment OWFrag1 = new Outside_Weather_Fragment();
 
@@ -51,21 +58,16 @@ public class HouseActivity extends AppCompatActivity {
 
                     switch (position) {
                         case 0:
-                            Intent garageDoorIntent = new Intent(HouseActivity.this, GarageDoorActivity.class);
-                            startActivity(garageDoorIntent);
+                            Intent garageIntent = new Intent(HouseActivity.this, GarageActivity.class);
+                            startActivity(garageIntent);
                             break;
 
                         case 1:
-                            Intent garageLightIntent = new Intent(HouseActivity.this, GarageLightActivity.class);
-                            startActivity(garageLightIntent);
-                            break;
-
-                        case 2:
                             Intent houseTemperatureIntent = new Intent(HouseActivity.this, HouseTemperatureActivity.class);
                             startActivity(houseTemperatureIntent);
                             break;
 
-                        case 3:
+                        case 2:
                             Intent outsideWeatherIntent = new Intent(HouseActivity.this, OutsideWeatherActivity.class);
                             startActivity(outsideWeatherIntent);
                             break;
@@ -75,7 +77,7 @@ public class HouseActivity extends AppCompatActivity {
 
                     switch (position) {
                         case 0:
-                            Garage_Door_Fragment GDFrag2 = new Garage_Door_Fragment();
+                            Garage_Fragment GDFrag2 = new Garage_Fragment();
                             if (GDFrag2 == null) {
                                 FragmentTransaction fragmentTransaction = myFragmentManager.beginTransaction();
                                 fragmentTransaction.add(R.id.container, GDFrag1);
@@ -87,18 +89,6 @@ public class HouseActivity extends AppCompatActivity {
                             }
                             break;
                         case 1:
-                            Garage_Light_Fragment GLFrag2 = new Garage_Light_Fragment();
-                            if (GLFrag2 == null) {
-                                FragmentTransaction fragmentTransaction = myFragmentManager.beginTransaction();
-                                fragmentTransaction.add(R.id.container, GLFrag1);
-                                fragmentTransaction.commit();
-                            } else{
-                                FragmentTransaction fragmentTransaction = myFragmentManager.beginTransaction();
-                                fragmentTransaction.replace(R.id.container, GLFrag1);
-                                fragmentTransaction.commit();
-                            }
-                            break;
-                        case 2:
                             House_Temperature_Fragment HTFrag2 = new House_Temperature_Fragment();
                             if (HTFrag2 == null) {
                                 FragmentTransaction fragmentTransaction1 = myFragmentManager.beginTransaction();
@@ -110,7 +100,7 @@ public class HouseActivity extends AppCompatActivity {
                                 fragmentTransaction1.commit();
                             }
                             break;
-                        case 3:
+                        case 2:
                             Outside_Weather_Fragment OWFrag2 = new Outside_Weather_Fragment();
                             if (OWFrag2 == null) {
                                 FragmentTransaction fragmentTransaction1 = myFragmentManager.beginTransaction();
@@ -127,7 +117,7 @@ public class HouseActivity extends AppCompatActivity {
             }
         });
 
-    }
+    } // end of method onCreate
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -170,6 +160,6 @@ public class HouseActivity extends AppCompatActivity {
                 break;
         }
         return true;
-    }
+    } // end of method onOptionsItemSelected
 
-}
+} // end of class HouseActivity

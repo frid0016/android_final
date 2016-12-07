@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 
+<!--
+File: outside_weather_fragment.xml
+Course: CST2335
+Lab Sections: 013 & 015
+Author: Michael Palmer
+Date: Dec 2017
+Description: Final Project
+-->
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical" android:layout_width="match_parent"
@@ -7,7 +16,7 @@
     android:weightSum="1">
 
     <TextView
-        android:text="OUTSIDE TEMPERATURE"
+        android:text="@string/outsideWeatherTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"

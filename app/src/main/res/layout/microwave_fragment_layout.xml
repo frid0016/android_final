@@ -2,52 +2,147 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFF00"
+    android:background="#191919"
     tools:context="nineseven.groupproject.Microwave_Fragment">
 
+    <ProgressBar
+        android:id="@+id/Progress_Spinner"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:indeterminateTint="@android:color/white"
+        android:indeterminate="true"
+        android:visibility="invisible" />
 
-    <EditText
-        android:id="@+id/Cooking_Time_Input"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="enter cooking time"
-        android:inputType="time" />
+    <TextView
+        android:id="@+id/Time_Display"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/Progress_Spinner"
+        android:gravity="center"
+        android:textSize="60dp"
+        android:text="00:00"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display3"
+        android:textColor="#FFFFFF" />
 
-    <Button
-        android:id="@+id/Stop_Button"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/Three"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/Reset_Button"
-        android:layout_below="@+id/Reset_Button"
-        android:layout_marginTop="13dp"
-        android:text="STOP" />
+        android:layout_below="@+id/Time_Display"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/Plus_Ten_Mins_Button"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:text=" + 10 mins "
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/Plus_One_Min_Button"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:text=" + 1 min "
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/Plus_Five_Secs_Button"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:text=" + 5 secs"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Four"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Three">
+
+        <Button
+            android:id="@+id/Defrost_Button"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:text="DEFROST"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/Bake_Button"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:text="BAKE"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textStyle="bold" />
+
+
+        <Button
+            android:id="@+id/Quick_30_Button"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:text="QUICK 30"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Five"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Four">
+
+        <Button
+            android:id="@+id/Stop_Button"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:background="#969696"
+            android:text="STOP"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textColor="#ED021D"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/Reset_Button"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:background="#969696"
+            android:text="RESET"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textStyle="bold" />
+    </LinearLayout>
 
     <Button
         android:id="@+id/Start_Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/Stop_Button"
-        android:layout_below="@+id/Stop_Button"
-        android:layout_marginTop="12dp"
-        android:text="START" />
-
-    <Button
-        android:id="@+id/Reset_Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/Cooking_Time_Input"
-        android:layout_below="@+id/Cooking_Time_Input"
-        android:layout_marginTop="81dp"
-        android:text="RESET" />
-
-    <TextView
-        android:id="@+id/Time_Remaining_View"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/Reset_Button"
-        android:layout_below="@+id/Cooking_Time_Input"
-        android:layout_marginTop="20dp" />
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/Five"
+        android:layout_centerVertical="true"
+        android:layout_margin="2dp"
+        android:background="#969696"
+        android:text="START"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#039919"
+        android:textStyle="bold" />
 
 
 </RelativeLayout>
