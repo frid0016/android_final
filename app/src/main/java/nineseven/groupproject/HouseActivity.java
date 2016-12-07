@@ -135,7 +135,6 @@ public class HouseActivity extends AppCompatActivity {
         return true;
     } // end of method onCreateOptionsMenu
 
-/*
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         AlertDialog.Builder builder;
@@ -172,6 +171,5 @@ public class HouseActivity extends AppCompatActivity {
         }
         return true;
     }
-*/
 
 }

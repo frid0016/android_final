@@ -47,7 +47,6 @@ public class GarageDoorActivity extends AppCompatActivity {
         return true;
     } // end of method onCreateOptionsMenu
 
-/*
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         AlertDialog.Builder builder;
@@ -61,7 +60,7 @@ public class GarageDoorActivity extends AppCompatActivity {
                 startActivity(livingRoomIntent);
                 break;
             case R.id.Kitchen_Menu_Item:
-                Intent kitchenIntent = new Intent(GarageDoorActivity.this, KitchenActivity.class);
+                Intent kitchenIntent = new Intent(GarageDoorActivity.this, Kitchen_Activity.class);
                 startActivity(kitchenIntent);
                 break;
             case R.id.Automobile_Menu_Item:
@@ -84,6 +83,5 @@ public class GarageDoorActivity extends AppCompatActivity {
         }
         return true;
     }
-*/
 
 }
