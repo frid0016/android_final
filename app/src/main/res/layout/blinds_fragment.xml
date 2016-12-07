@@ -1,30 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <ImageView
         android:layout_width="200dp"
-        android:layout_height="247dp"
-        app:srcCompat="@drawable/kot"
-        android:id="@+id/window" />
+        android:layout_height="200dp"
+        app:srcCompat="@drawable/liv"
+        android:id="@+id/imgroom"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
 
     <SeekBar
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/seekBar5"
-        android:layout_below="@+id/window"
+        android:layout_below="@+id/imgroom"
         android:layout_alignParentStart="true"
-        android:layout_alignEnd="@+id/window" />
+        android:id="@+id/roomseekBar"
+        android:layout_alignEnd="@+id/imgroom"
+        android:max="100"
+        android:progress="100"/>
 
-    <CheckBox
-        android:text="CheckBox"
+    <TextView
+        android:text="Closed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/seekBar5"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="17dp"
-        android:id="@+id/checkBox" />
+        android:id="@+id/close_bl"
+        android:layout_below="@+id/roomseekBar"
+        android:layout_alignParentStart="true" />
 
+    <TextView
+        android:text="Open"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/open_bl"
+        android:layout_below="@+id/roomseekBar"
+        android:layout_alignEnd="@+id/roomseekBar" />
 </RelativeLayout>

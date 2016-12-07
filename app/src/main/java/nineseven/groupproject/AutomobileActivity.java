@@ -11,7 +11,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 public class AutomobileActivity extends AppCompatActivity {
-    String[] Automobile = {"GPS", "Temperature", "Lights", "Radio", "Fuel", "Odometer"};
+    String[] Automobile = {"GPS", "Temperature", "Lights", "Radio", "Fuel", "Odometer", "Drive"};
     ListView listView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +55,10 @@ public class AutomobileActivity extends AppCompatActivity {
                     case 5:
                         Intent odometerIntent = new Intent(AutomobileActivity.this, OdometerActivity.class);
                         startActivity(odometerIntent);
+                        break;
+                    case 6:
+                        Intent driveIntent = new Intent(AutomobileActivity.this, DriveActivity.class);
+                        startActivity(driveIntent);
                         break;
                 }
 

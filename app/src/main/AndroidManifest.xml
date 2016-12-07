@@ -24,9 +24,10 @@
             android:name=".Kitchen_Activity"
             android:label="@string/title_activity_kitchen"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".AutomobileActivity"
+        <activity
+            android:name=".AutomobileActivity"
             android:label=""
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".FuelActivity" />
         <activity android:name=".TemperatureActivity" />
         <activity android:name=".LightsActivity" />
@@ -50,7 +51,8 @@
         <activity android:name=".BlindsActivity" />
         <activity android:name=".Microwave_Activity" />
         <activity android:name=".Fridge_Activity" />
-        <activity android:name=".Kitchen_Light_Activity"></activity>
+        <activity android:name=".Kitchen_Light_Activity" />
+        <activity android:name=".DriveActivity"></activity>
     </application>
 
 </manifest>
