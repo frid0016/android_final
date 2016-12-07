@@ -53,6 +53,7 @@ public class GarageActivity extends AppCompatActivity {
 
         Button gdOpenButton = (Button) findViewById(R.id.gdOpenButton);
         Button gdCloseButton = (Button) findViewById(R.id.gdCloseButton);
+        final ImageView garageImageView = (ImageView) findViewById(R.id.garageImageView);
 
         glSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -71,7 +72,8 @@ public class GarageActivity extends AppCompatActivity {
             boolean isChecked;
             @Override
             public void onClick(View view) {
-                if(!isChecked){
+                garageImageView.setImageResource(R.drawable.garageopen);
+                if(!glSwitch.isChecked()){
                     int color = Color.parseColor("#80ffff00");
                     glImageView.setColorFilter(color);
                     glSwitch.toggle();
@@ -84,6 +86,7 @@ public class GarageActivity extends AppCompatActivity {
         gdCloseButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                garageImageView.setImageResource(R.drawable.garageclosed);
                 Snackbar.make(view, "Garage Door Closes", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }

@@ -26,16 +26,6 @@ Description: Final Project
         android:id="@+id/textView15"
         android:textAppearance="@style/TextAppearance.AppCompat.Button" />
 
-    <TextView
-        android:text="@string/garageDoorTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/gdTextView"
-        android:textAppearance="@style/TextAppearance.AppCompat.Button"
-        android:layout_below="@+id/glImageView"
-        android:layout_alignStart="@+id/textView15"
-        android:layout_marginTop="35dp" />
-
     <ImageView
         android:layout_width="50dp"
         app:srcCompat="@drawable/lamp"
@@ -56,21 +46,41 @@ Description: Final Project
         android:layout_marginStart="33dp" />
 
     <Button
-        android:text="@string/gdOpenButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/gdOpenButton"
-        android:layout_below="@+id/gdTextView"
-        android:layout_toEndOf="@+id/glSwitch"
-        android:layout_marginTop="41dp" />
-
-    <Button
         android:text="@string/gdCloseButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/gdCloseButton"
         android:layout_below="@+id/gdOpenButton"
         android:layout_alignStart="@+id/gdOpenButton"
-        android:layout_marginTop="15dp" />
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:text="@string/gdOpenButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/gdOpenButton"
+        android:layout_marginTop="13dp"
+        android:layout_alignTop="@+id/garageImageView"
+        android:layout_toEndOf="@+id/garageImageView"
+        android:layout_marginStart="66dp" />
+
+    <TextView
+        android:text="@string/garageDoorTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/gdTextView"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/glImageView"
+        android:layout_alignStart="@+id/glImageView" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/garageclosed"
+        android:layout_marginTop="13dp"
+        android:id="@+id/garageImageView"
+        android:layout_below="@+id/gdTextView"
+        android:layout_alignEnd="@+id/textView15" />
 
 </RelativeLayout>
