@@ -20,41 +20,7 @@ public class Auto_Drive_Fragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.auto_drive_fragment, null);
         return view;
-    }
 
-    public void onActivityCreated(Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-
-        Button save = (Button) getView().findViewById(R.id.save);
-        Button reset = (Button) getView().findViewById(R.id.reset);
-        Button save_fuel = (Button) getView().findViewById(R.id.save_fuel);
-        Button fill = (Button) getView().findViewById(R.id.fill_tank);
-
-        save.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                        Toast.makeText(getActivity().getApplicationContext(), "Number of km saved", Toast.LENGTH_LONG).show();
-                    }
-        });
-
-        reset.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Toast.makeText(getActivity().getApplicationContext(), "Total km is 0", Toast.LENGTH_LONG).show();
-            }
-        });
-
-        save_fuel.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-
-                        Toast.makeText(getActivity().getApplicationContext(), "Fuel Level Saved", Toast.LENGTH_LONG).show();
-
-            }
-        });
-
-        fill.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Toast.makeText(getActivity().getApplicationContext(), "Fuel level is 70", Toast.LENGTH_LONG).show();
-            }
-        });
     }
 
 }

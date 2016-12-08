@@ -17,27 +17,5 @@ public class Auto_Temp_Fragment extends Fragment {
         return view;
     }
 
-    public void onActivityCreated(Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-
-        Button set1 = (Button) getView().findViewById(R.id.button_front);
-        Button set2 = (Button) getView().findViewById(R.id.button_back);
-
-        set1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Front temperature is set", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-
-        set2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Back temperature is set", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-    } // end of method onCreate
 
 }
