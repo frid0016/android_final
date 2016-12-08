@@ -4,6 +4,8 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -12,6 +14,7 @@ import java.util.ArrayList;
 public class OdometerActivity extends AppCompatActivity {
 
     TextView total;
+    Button reset;
     ArrayList<Integer> list = new ArrayList<Integer>();
     int sum = 0;
 
@@ -21,6 +24,7 @@ public class OdometerActivity extends AppCompatActivity {
         setContentView(R.layout.activity_odometer);
 
         total = (TextView)findViewById(R.id.total_show);
+        reset = (Button) findViewById(R.id.reset);
 
         SharedPreferences myPrefs = getSharedPreferences("Default km", MODE_PRIVATE);
         String kilom = myPrefs.getString("Default km", "km");
@@ -35,6 +39,13 @@ public class OdometerActivity extends AppCompatActivity {
         }
 
         total.setText(sum + "");
+
+        reset.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                sum = 0;
+                total.setText(sum + "");
+            }
+        });
     }
     @Override
     protected void onResume(){

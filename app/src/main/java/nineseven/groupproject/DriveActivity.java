@@ -9,11 +9,18 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
+
+import java.util.ArrayList;
 
 public class DriveActivity extends AppCompatActivity {
 
     EditText km;
     Button save;
+    TextView total;
+    Button reset;
+    ArrayList<Integer> list = new ArrayList<Integer>();
+    int sum = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +29,8 @@ public class DriveActivity extends AppCompatActivity {
 
         km = (EditText)findViewById(R.id.drive_km);
         save = (Button)findViewById(R.id.save);
+        total = (TextView)findViewById(R.id.total_show);
+        reset = (Button) findViewById(R.id.reset);
 
         save.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -31,6 +40,17 @@ public class DriveActivity extends AppCompatActivity {
                 editor.putString("Default km", km.getText().toString());
                 editor.commit();
 
+
+                sum += Integer.parseInt(km.getText().toString());
+                total.setText(sum + "");
+
+            }
+        });
+
+        reset.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                sum = 0;
+                total.setText(sum + "");
             }
         });
     }
