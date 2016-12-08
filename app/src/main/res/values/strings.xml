@@ -18,8 +18,9 @@
     <string name="garageLightTitle">Garage Light</string>
     <string name="glSwitchText">OFF / ON</string>
     <string name="houseTemperatureTitle">House Temperature</string>
-    <string name="htSetTemperatureTextView">Set temperature: </string>
+    <string name="htCurTempLabel">Current temperature: </string>
+    <string name="htNewTempLabel">Enter new temperature: </string>
     <string name="htSetButton">Set</string>
-    <string name="htHintEditText">enter number in °C</string>
+    <string name="htHintEditText">15 - 25 °C range</string>
     <string name="outsideWeatherTitle">Outside Weather</string>
 </resources>
