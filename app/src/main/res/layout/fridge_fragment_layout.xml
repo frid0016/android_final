@@ -1,25 +1,119 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FF69B4"
+    android:background="@drawable/fridge"
     tools:context="nineseven.groupproject.Fridge_Fragment">
 
-    <TextView
-        android:id="@+id/one"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/Freezer_Temp_Layout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Fridge Fragment"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+        android:orientation="horizontal">
 
-    <TextView
-        android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/Freezer_Label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text=" Current Freezer Temperature" />
+
+        <TextView
+            android:id="@+id/Freezer_Value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Freezer_Input_Layout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/one"
-        android:gravity="center"
-        android:text="Freezer Temperature"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+        android:layout_below="@+id/Freezer_Temp_Layout"
+        android:orientation="horizontal">
 
+        <TextView
+            android:id="@+id/Set_Freezer_Label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:text=" New Freezer Temperature" />
+
+        <EditText
+            android:id="@+id/Set_Freezer_Input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:ems="10"
+            android:inputType="numberSigned" />
+
+        <Button
+            android:id="@+id/Freezer_Set_Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Set"
+            android:textAppearance="@android:style/TextAppearance.Material.Small"
+            android:textColor="#00BFFF" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Fridge_Temperate_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/Fridge_Input_Layout"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/Fridge_Label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text=" Current Fridge Temperature" />
+
+        <TextView
+            android:id="@+id/Fridge_Value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Fridge_Input_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/Set_Fridge_Label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:text=" New Fridge Temperature" />
+
+        <EditText
+            android:id="@+id/Set_Fridge_Input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:ems="10"
+            android:inputType="numberSigned"
+            android:maxLength="3" />
+
+        <Button
+            android:id="@+id/Fridge_Set_Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Set"
+            android:textAppearance="@android:style/TextAppearance.Material.Small"
+            android:textColor="#00BFFF" />
+
+    </LinearLayout>
 
 </RelativeLayout>
