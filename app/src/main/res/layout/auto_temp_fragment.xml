@@ -4,7 +4,7 @@
     android:layout_height="match_parent">
 
     <Button
-        android:text="SET"
+        android:text="@string/set"
         android:layout_width="wrap_content"
         android:layout_height="30dp"
         android:id="@+id/button_back"
@@ -13,7 +13,7 @@
         android:layout_below="@+id/car_temp2" />
 
     <TextView
-        android:text="Set temperature in the front:"
+        android:text="@string/ask_front_temp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -25,7 +25,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:id="@+id/car_front_temp"
-        android:hint="front temp"
+        android:hint="@string/hint_front"
         android:layout_width="150dp"
         android:layout_below="@+id/car_temp1"
         android:layout_alignParentStart="true"
@@ -35,14 +35,14 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:id="@+id/car_back_temp"
-        android:hint="back temp"
+        android:hint="@string/hint_back"
         android:layout_width="150dp"
         android:layout_below="@+id/car_temp2"
         android:layout_alignParentStart="true"
         android:inputType="number" />
 
     <TextView
-        android:text="Set temperature in the back:"
+        android:text="@string/ask_back_temp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/car_temp2"
@@ -52,7 +52,7 @@
         android:layout_alignParentStart="true" />
 
     <Button
-        android:text="SET"
+        android:text="@string/set"
         android:layout_width="wrap_content"
         android:layout_height="30dp"
         android:id="@+id/button_front"

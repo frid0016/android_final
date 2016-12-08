@@ -6,7 +6,7 @@
 
 
     <Switch
-        android:text="Turn on/off"
+        android:text="@string/LRswitch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -14,7 +14,7 @@
         android:id="@+id/tv_switch" />
 
     <TextView
-        android:text="Please enter a channel:"
+        android:text="@string/ask_channel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tv_switch"
@@ -33,7 +33,7 @@
         android:hint="1-25" />
 
     <Button
-        android:text="ENTER"
+        android:text="@string/enter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/editText2"

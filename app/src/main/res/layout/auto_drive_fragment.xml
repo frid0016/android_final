@@ -25,7 +25,7 @@
         android:layout_alignParentStart="true" />
 
     <TextView
-        android:text="How far to drive?"
+        android:text="@string/how_far"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/ask_text"
@@ -39,7 +39,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:id="@+id/drive_km"
-        android:hint="number of km"
+        android:hint="km_hint"
         android:inputType="number"
         android:layout_width="130dp"
         android:layout_alignBaseline="@+id/save"
@@ -65,7 +65,7 @@
         android:fontFamily="sans-serif" />
 
     <Button
-        android:text="Save"
+        android:text="@string/save"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/save"
@@ -73,7 +73,7 @@
         android:layout_toEndOf="@+id/fuel_tv" />
 
     <Button
-        android:text="RESET"
+        android:text="@string/reset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/reset"
@@ -82,7 +82,7 @@
         android:layout_alignEnd="@+id/textView2" />
 
     <TextView
-        android:text="Estimated km car can drive:"
+        android:text="@string/est"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/fuel_tv"
@@ -91,7 +91,7 @@
         android:layout_alignParentStart="true" />
 
     <TextView
-        android:text="Odometer"
+        android:text="@string/odometer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView2"
@@ -111,7 +111,7 @@
         android:layout_alignParentStart="true" />
 
     <TextView
-        android:text="Total km:"
+        android:text="@string/total_km"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/odom_total"
@@ -121,7 +121,7 @@
         android:layout_alignParentStart="true" />
 
     <TextView
-        android:text="Fuel Level"
+        android:text="@string/level"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/fuel"
@@ -144,13 +144,13 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:id="@+id/fuel_level_edit"
-        android:hint="fuel level"
+        android:hint="@string/level_hint"
         android:inputType="number"
         android:layout_below="@+id/fuelimg"
         android:layout_alignParentStart="true" />
 
     <Button
-        android:text="SAVE"
+        android:text="@string/save"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/save_fuel"
@@ -159,7 +159,7 @@
         android:layout_marginBottom="10dp" />
 
     <Button
-        android:text="FILL TANK"
+        android:text="@string/fill"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="13dp"

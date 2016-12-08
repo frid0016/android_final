@@ -22,6 +22,7 @@
     <string name="htSetButton">Set</string>
     <string name="htHintEditText">enter number in °C</string>
     <string name="outsideWeatherTitle">Outside Weather</string>
+
     <string name="car_text">"\n Author: Eduard Tikhomirov \n Version: 1 \n Instructions: \n Click on setting to see detailed controls.</string>
     <string name="gps_text">"\n Author: Eduard Tikhomirov \n Version: 1 \n Instructions: \n Click to launch gps navigator.</string>
     <string name="temp_text">"\n Author: Eduard Tikhomirov \n Version: 1 \n Instructions: \n Set temperature for front and back.</string>
@@ -33,4 +34,41 @@
     <string name="lamp_text">"\n Author: Anastasia Fridrikova \n Version: 1 \n Instructions: \n Turn off/of standard light, dimmable light and color light.</string>
     <string name="tv_text">"\n Author: Anastasia Fridrikova \n Version: 1 \n Instructions: \n Turn off/on TV and select a channel.</string>
     <string name="blinds_text">"\n Author: Anastasia Fridrikova \n Version: 1 \n Instructions: \n Select blinds position.</string>
+
+    //Living Room
+    <string name="LRswitch">OFF/ON</string>
+    <string name="red">RED</string>
+    <string name="green">GREEN</string>
+    <string name="purple">PURPLE</string>
+    <string name="blue">BLUE</string>
+
+    <string name="ask_channel">Please enter a channel:</string>
+    <string name="enter">ENTER</string>
+
+    <string name="closed">closed</string>
+    <string name="open">open</string>
+
+    //Automobile
+    <string name="navigator">Launch navigator</string>
+    <string name="ask_front_temp">Set temperature in the front:</string>
+    <string name="hint_front">front temp</string>
+    <string name="ask_back_temp">Set temperature in the back:</string>
+    <string name="hint_back">back temp</string>
+    <string name="set">SET</string>
+    <string name="norm">Normal headlights</string>
+    <string name="high">High headlights</string>
+    <string name="inside">Light inside the car</string>
+    <string name="radio">Select Radio Station</string>
+
+    <string name="how_far">How far to drive?</string>
+    <string name="km_hint">number of km</string>
+    <string name="save">Save</string>
+    <string name="odometer">Odometer</string>
+    <string name="total_km">Total km:</string>
+    <string name="reset">RESET</string>
+    <string name="level">Fuel Level</string>
+    <string name="level_hint">fuel level</string>
+    <string name="est">Estimated km car can drive:</string>
+    <string name="fill">FILL TANK</string>
+
 </resources>
