@@ -39,14 +39,16 @@ Description: Final Project
         android:layout_width="250dp"
         android:layout_height="match_parent"
         android:layout_alignParentEnd="true"
-        android:layout_below="@+id/House_Toolbar">
+        android:layout_below="@+id/House_Toolbar"
+        android:layout_toEndOf="@+id/House_List_View">
     </FrameLayout>
 
     <ListView
         android:layout_width="300dp"
         android:id="@+id/House_List_View"
-        android:layout_alignParentBottom="true"
+        android:layout_height="250dp"
         android:layout_alignParentStart="true"
-        android:layout_height="250dp" />
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/House_Toolbar" />
 
 </RelativeLayout>

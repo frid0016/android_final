@@ -11,8 +11,11 @@ package nineseven.groupproject;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.Toast;
 
 /**
  * This class extends Fragment and inflates house temperature fragment
@@ -33,4 +36,17 @@ public class House_Temperature_Fragment extends Fragment{
         return view;
     }
 
-}
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
+        Button htSetButton = (Button) getView().findViewById(R.id.htSetButton);
+
+        htSetButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getActivity().getApplicationContext(), "House temperature has been set", Toast.LENGTH_LONG).show();
+            }
+        });
+    } // end of method onCreate
+
+} // end of House_Temperature_Fragment
