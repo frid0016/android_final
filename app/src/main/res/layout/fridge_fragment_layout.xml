@@ -17,13 +17,15 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:text=" Current Freezer Temperature" />
+            android:text=" Current Freezer Temperature"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/Freezer_Value"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:textStyle="bold" />
 
     </LinearLayout>
 
@@ -39,7 +41,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="4"
-            android:text=" New Freezer Temperature" />
+            android:text=" New Freezer Temperature"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/Set_Freezer_Input"
@@ -56,7 +59,8 @@
             android:layout_weight="1"
             android:text="Set"
             android:textAppearance="@android:style/TextAppearance.Material.Small"
-            android:textColor="#00BFFF" />
+            android:textColor="#00BFFF"
+            android:textStyle="bold" />
 
     </LinearLayout>
 
@@ -72,13 +76,15 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:text=" Current Fridge Temperature" />
+            android:text=" Current Fridge Temperature"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/Fridge_Value"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:textStyle="bold" />
 
     </LinearLayout>
 
@@ -94,7 +100,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="4"
-            android:text=" New Fridge Temperature" />
+            android:text=" New Fridge Temperature"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/Set_Fridge_Input"
@@ -112,7 +119,8 @@
             android:layout_weight="1"
             android:text="Set"
             android:textAppearance="@android:style/TextAppearance.Material.Small"
-            android:textColor="#00BFFF" />
+            android:textColor="#00BFFF"
+            android:textStyle="bold" />
 
     </LinearLayout>
 

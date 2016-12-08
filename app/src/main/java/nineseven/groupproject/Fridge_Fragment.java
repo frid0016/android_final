@@ -5,7 +5,6 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,18 +18,14 @@ import android.widget.Toast;
  */
 public class Fridge_Fragment extends Fragment {
 
-    protected static final String ACTIVITY_NAME = "Fridgefragment";
-
     private TextView freezerCurrent;
     private TextView fridgeCurrent;
     private EditText fridgeNewTemperature;
     private EditText freezerNewTemperature;
     private Button setFreezer;
     private Button setFridge;
-    private String freezerNew;
-    private String fridgeNew;
-//    private SharedPreferences sharedPreferences;
-//    private SharedPreferences.Editor editor;
+    private SharedPreferences sharedPreferences;
+    private SharedPreferences.Editor editor;
 
 
     public Fridge_Fragment() {
@@ -40,10 +35,8 @@ public class Fridge_Fragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fridge_fragment_layout, container, false);
-
     } // end of method onCreateView
 
     @Override
@@ -57,10 +50,11 @@ public class Fridge_Fragment extends Fragment {
         setFreezer = (Button) view.findViewById(R.id.Freezer_Set_Button);
         setFridge = (Button) view.findViewById(R.id.Fridge_Set_Button);
 
-        freezerCurrent.setText(freezerNew);
-        Log.i(ACTIVITY_NAME, "onViewCreated: "+ freezerNew);
-        fridgeCurrent.setText(fridgeNew);
-        Log.i(ACTIVITY_NAME, "onViewCreated: "+ fridgeNew);
+        sharedPreferences = getActivity().getSharedPreferences("FridgeData", Context.MODE_PRIVATE);
+        editor = sharedPreferences.edit();
+
+        freezerCurrent.setText(sharedPreferences.getString("freezer", " "));
+        fridgeCurrent.setText(sharedPreferences.getString("fridge", " "));
 
         setFreezer.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -70,12 +64,9 @@ public class Fridge_Fragment extends Fragment {
                             || Integer.parseInt(freezerNewTemperature.getText().toString()) > -18) {
                         Toast.makeText(getContext(), "Choose a temperature between -18 to -25", Toast.LENGTH_SHORT).show();
                     } else {
-                        SharedPreferences sharedPreferences = getActivity().getSharedPreferences("FridgeData", Context.MODE_PRIVATE);
-                        SharedPreferences.Editor editor = sharedPreferences.edit();
                         editor.putString("freezer", freezerNewTemperature.getText().toString());
                         editor.commit();
-                        freezerNew = sharedPreferences.getString("freezer", " ");
-                        freezerCurrent.setText(freezerNew);
+                        freezerCurrent.setText(sharedPreferences.getString("freezer", " "));
 
                         Toast.makeText(getContext(), "New temperature set for Freezer", Toast.LENGTH_SHORT).show();
                     }
@@ -93,13 +84,9 @@ public class Fridge_Fragment extends Fragment {
                             || Integer.parseInt(fridgeNewTemperature.getText().toString()) > 4) {
                         Toast.makeText(getContext(), "Choose a temperature between 0 to 4", Toast.LENGTH_SHORT).show();
                     } else {
-                        SharedPreferences sharedPreferences = getActivity().getSharedPreferences("FridgeData", Context.MODE_PRIVATE);
-                        SharedPreferences.Editor editor = sharedPreferences.edit();
-                        editor = sharedPreferences.edit();
                         editor.putString("fridge", fridgeNewTemperature.getText().toString());
                         editor.commit();
-                        fridgeNew = sharedPreferences.getString("fridge", " ");
-                        fridgeCurrent.setText(fridgeNew);
+                        fridgeCurrent.setText(sharedPreferences.getString("fridge", " "));
 
                         Toast.makeText(getContext(), "New temperature set for Fridge", Toast.LENGTH_SHORT).show();
                     }
@@ -108,7 +95,6 @@ public class Fridge_Fragment extends Fragment {
                 }
             } // end onClick
         });
-
 
     } // end of method onViewCreated
 
