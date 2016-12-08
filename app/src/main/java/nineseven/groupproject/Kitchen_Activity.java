@@ -1,3 +1,11 @@
+/* File: Kitchen_Activity.java
+ * Course: CST2335
+ * Lab Sections: 013 & 015
+ * Author: Mahesh Bagde
+ * Date: Dec 2017
+ * Description: Final Project
+ */
+
 package nineseven.groupproject;
 
 import android.content.DialogInterface;
@@ -10,6 +18,8 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 
+    // This class loads the Kitchen List Fragment which is the first launch screen
+    // that the user see when clicking on the Kitchen icon.
 public class Kitchen_Activity extends AppCompatActivity
         implements Kitchen_List_Fragment.callbacks {
 
@@ -28,6 +38,9 @@ public class Kitchen_Activity extends AppCompatActivity
                 .commit();
     }
 
+    // checks if the view has loaded the fragment placeholder to determine the orientation of the phone
+    // accordingly loads the detail fragment if the placeholder in not null
+    // or starts a new activity if the placeholder in null
     @Override
     public void onItemSelected(int position) {
         switch (position) {
@@ -76,10 +89,11 @@ public class Kitchen_Activity extends AppCompatActivity
         return true;
     } // end of method onCreateOptionsMenu
 
+    // Depending on the icon clicked on the toolbar menu options, it starts the relevant activity
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         AlertDialog.Builder builder;
-        switch(item.getItemId()) {
+        switch (item.getItemId()) {
             case R.id.House_Menu_Item:
                 Intent houseIntent = new Intent(Kitchen_Activity.this, HouseActivity.class);
                 startActivity(houseIntent);
@@ -112,6 +126,5 @@ public class Kitchen_Activity extends AppCompatActivity
         }
         return true;
     } // end of method onOptionsItemSelected
-
 
 } // end of class Kitchen_Activity

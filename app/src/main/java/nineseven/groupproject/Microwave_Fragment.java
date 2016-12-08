@@ -1,3 +1,11 @@
+/* File: Microwave_Fragment.java
+ * Course: CST2335
+ * Lab Sections: 013 & 015
+ * Author: Mahesh Bagde
+ * Date: Dec 2017
+ * Description: Final Project
+ */
+
 package nineseven.groupproject;
 
 import android.content.Context;
@@ -15,6 +23,7 @@ import android.widget.TextView;
 
 /**
  * A simple {@link Fragment} subclass.
+ * This class manages the user interaction to operate a microwave
  */
 public class Microwave_Fragment extends Fragment {
 
@@ -229,6 +238,7 @@ public class Microwave_Fragment extends Fragment {
 
     } // end of method onViewCreated
 
+    // extends the CountDownTimer class to use the feature for microwave
     public class MicrowaveCountDownTimer extends CountDownTimer {
         /**
          * @param millisInFuture    The number of millis in the future from the call
@@ -241,6 +251,7 @@ public class Microwave_Fragment extends Fragment {
             super(millisInFuture, countDownInterval);
         } // end of constructor
 
+        // displays the time remaining to cook
         @Override
         public void onTick(long millisUntilFinished) {
             long millis = millisUntilFinished;
@@ -272,6 +283,7 @@ public class Microwave_Fragment extends Fragment {
         } // end of method onFinish
     } // end of class MicrowaveCountDownTimer
 
+    // converts time input into milliseconds
     public long convertTimeToMilliseconds(int h, int m, int s) {
         long hrs = h * 3600000;
         long min = m * 60000;
@@ -279,6 +291,7 @@ public class Microwave_Fragment extends Fragment {
         return hrs + min + sec;
     } // end of method convertTimeToMilliseconds
 
+    // displays time as per hh:mm:ss requirement or mm:ss requirement
     public void displayTime(int h, int m, int s) {
         if (hrs > 0) {
             timeDisplay.setText(String.format("%02d:%02d:%02d",hrs, mins, secs));

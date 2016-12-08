@@ -1,3 +1,11 @@
+/* File: Kitchen_Light_Fragment.java
+ * Course: CST2335
+ * Lab Sections: 013 & 015
+ * Author: Mahesh Bagde
+ * Date: Dec 2017
+ * Description: Final Project
+ */
+
 package nineseven.groupproject;
 
 import android.os.Bundle;
@@ -13,6 +21,7 @@ import android.widget.Switch;
 
 /**
  * A simple {@link Fragment} subclass.
+ * This class manages the user interaction to switch the lights ON or OFF for the Kitchen
  */
 public class Kitchen_Light_Fragment extends Fragment {
 

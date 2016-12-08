@@ -1,3 +1,11 @@
+/* File: Fridge_Fragment.java
+ * Course: CST2335
+ * Lab Sections: 013 & 015
+ * Author: Mahesh Bagde
+ * Date: Dec 2017
+ * Description: Final Project
+ */
+
 package nineseven.groupproject;
 
 import android.content.Context;
@@ -15,6 +23,7 @@ import android.widget.Toast;
 
 /**
  * A simple {@link Fragment} subclass.
+ * This class manages the user interaction to manage the settings for a fridge
  */
 public class Fridge_Fragment extends Fragment {
 
@@ -38,6 +47,9 @@ public class Fridge_Fragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fridge_fragment_layout, container, false);
     } // end of method onCreateView
+
+    // allows the user to set a desired temperature within limits for the
+    // fridge and freezer sections
 
     @Override
     public void onViewCreated(final View view, @Nullable Bundle savedInstanceState) {

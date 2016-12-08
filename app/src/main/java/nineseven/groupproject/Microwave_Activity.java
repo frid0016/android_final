@@ -1,3 +1,11 @@
+/* File: Microwave_Activity.java
+ * Course: CST2335
+ * Lab Sections: 013 & 015
+ * Author: Mahesh Bagde
+ * Date: Dec 2017
+ * Description: Final Project
+ */
+
 package nineseven.groupproject;
 
 import android.content.DialogInterface;
@@ -9,6 +17,7 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 
+// this class loads the fragment into portrait mode when microwave activity is called
 public class Microwave_Activity extends AppCompatActivity {
 
     @Override
@@ -35,6 +44,7 @@ public class Microwave_Activity extends AppCompatActivity {
         return true;
     } // end of method onCreateOptionsMenu
 
+    // Depending on the icon clicked on the toolbar menu options, it starts the relevant activity
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         AlertDialog.Builder builder;
