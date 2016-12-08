@@ -10,12 +10,13 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="nineseven.groupproject.GPSActivity">
 
-    <Button
-        android:text="Launch navigator"
+
+    <fragment
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:name="nineseven.groupproject.Auto_GPS_Fragment"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
-        android:id="@+id/navigator" />
-
+        android:id="@+id/fragment8"
+        tools:layout="@layout/auto_gps_fragment" />
 </RelativeLayout>

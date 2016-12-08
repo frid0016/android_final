@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/bluecar"
+        android:id="@+id/bluecar"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="How far to drive?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ask_text"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/bluecar"
+        android:layout_marginStart="15dp"
+        android:fontFamily="serif-monospace" />
+
+    <EditText
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:id="@+id/drive_km"
+        android:hint="number of km"
+        android:inputType="number"
+        android:layout_width="130dp"
+        android:layout_alignBaseline="@+id/save"
+        android:layout_alignBottom="@+id/save"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:id="@+id/total_show"
+        android:layout_height="30dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:layout_marginStart="11dp"
+        android:layout_alignBottom="@+id/odom_total"
+        android:layout_toEndOf="@+id/odom_total" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/fuel_tv"
+        android:layout_alignParentStart="true"
+        android:id="@+id/km_car"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+        android:fontFamily="sans-serif" />
+
+    <Button
+        android:text="Save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/save"
+        android:layout_below="@+id/ask_text"
+        android:layout_toEndOf="@+id/fuel_tv" />
+
+    <Button
+        android:text="RESET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/reset"
+        android:layout_alignBaseline="@+id/total_show"
+        android:layout_alignBottom="@+id/total_show"
+        android:layout_alignEnd="@+id/textView2" />
+
+    <TextView
+        android:text="Estimated km car can drive:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fuel_tv"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+        android:layout_below="@+id/fuel_level_edit"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Odometer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:fontFamily="serif-monospace"
+        android:layout_below="@+id/save"
+        android:layout_alignEnd="@+id/save"
+        android:layout_marginTop="11dp"
+        android:layout_alignStart="@+id/ask_text" />
+
+    <ImageView
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        app:srcCompat="@drawable/odometer"
+        android:id="@+id/imageView2"
+        android:layout_alignTop="@+id/textView2"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Total km:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/odom_total"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+        android:layout_marginTop="11dp"
+        android:layout_below="@+id/imageView2"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Fuel Level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fuel"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:fontFamily="serif-monospace"
+        android:layout_alignTop="@+id/fuelimg"
+        android:layout_alignStart="@+id/textView2" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/fuel"
+        android:id="@+id/fuelimg"
+        android:layout_below="@+id/reset"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="11dp" />
+
+    <EditText
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:id="@+id/fuel_level_edit"
+        android:hint="fuel level"
+        android:inputType="number"
+        android:layout_below="@+id/fuelimg"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="SAVE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/save_fuel"
+        android:layout_above="@+id/fuel_tv"
+        android:layout_toEndOf="@+id/fuel_tv"
+        android:layout_marginBottom="10dp" />
+
+    <Button
+        android:text="FILL TANK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:id="@+id/fill_tank"
+        android:layout_below="@+id/fuel_tv"
+        android:layout_toEndOf="@+id/fuel_tv" />
+
+</RelativeLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:text="Select Radio Station"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:id="@+id/select_radio"
+        android:layout_alignEnd="@+id/station3"
+        android:layout_alignParentStart="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/play"
+        android:id="@+id/play"
+        android:layout_alignTop="@+id/stop"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="4"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/station4"
+        android:layout_below="@+id/station3"
+        android:layout_alignParentStart="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/pause"
+        android:id="@+id/stop"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/station4"
+        android:layout_toEndOf="@+id/play" />
+
+    <Button
+        android:text="1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/station1"
+        android:layout_marginTop="17dp"
+        android:layout_below="@+id/select_radio"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="3"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/station3"
+        android:layout_alignBaseline="@+id/station2"
+        android:layout_alignBottom="@+id/station2"
+        android:layout_alignStart="@+id/station6" />
+
+    <Button
+        android:text="2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/station2"
+        android:layout_above="@+id/station5"
+        android:layout_toEndOf="@+id/station4"
+        android:layout_marginStart="13dp" />
+
+    <Button
+        android:text="5"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/station5"
+        android:layout_below="@+id/station1"
+        android:layout_alignStart="@+id/station2" />
+
+    <Button
+        android:text="6"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/station6"
+        android:layout_below="@+id/station3"
+        android:layout_alignEnd="@+id/stop" />
+
+</RelativeLayout>

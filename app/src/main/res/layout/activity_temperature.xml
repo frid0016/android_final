@@ -11,61 +11,13 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="nineseven.groupproject.TemperatureActivity">
 
-    <Button
-        android:text="SET"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:id="@+id/button_back"
-        android:layout_toEndOf="@+id/car_temp2"
-        android:layout_alignBottom="@+id/car_back_temp"
-        android:layout_below="@+id/car_temp2" />
 
-    <TextView
-        android:text="Set temperature in the front:"
+    <fragment
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:name="nineseven.groupproject.Auto_Temp_Fragment"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
-        android:id="@+id/car_temp1"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
-
-    <EditText
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:id="@+id/car_front_temp"
-        android:hint="front temp"
-        android:layout_width="150dp"
-        android:layout_below="@+id/car_temp1"
-        android:layout_alignParentStart="true" />
-
-    <EditText
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:id="@+id/car_back_temp"
-        android:hint="back temp"
-        android:layout_width="150dp"
-        android:layout_below="@+id/car_temp2"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:text="Set temperature in the back:"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/car_temp2"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:layout_marginTop="15dp"
-        android:layout_below="@+id/car_front_temp"
-        android:layout_alignParentStart="true" />
-
-    <Button
-        android:text="SET"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:id="@+id/button_front"
-        android:layout_above="@+id/car_temp2"
-        android:layout_toEndOf="@+id/car_temp1"
-        android:layout_below="@+id/car_temp1" />
-
+        android:id="@+id/fragment9"
+        tools:layout="@layout/auto_temp_fragment" />
 </RelativeLayout>

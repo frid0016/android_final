@@ -11,80 +11,13 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="nineseven.groupproject.RadioActivity">
 
-    <ProgressBar
-        style="?android:attr/progressBarStyleHorizontal"
+
+    <fragment
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/play"
-        android:layout_marginTop="38dp"
-        android:id="@+id/progressBar"
-        android:layout_alignParentStart="true" />
-
-    <Button
-        android:text="4"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:id="@+id/station4"
-        android:layout_below="@+id/station2"
-        android:layout_alignParentStart="true" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/play"
-        android:id="@+id/play"
+        android:name="nineseven.groupproject.Auto_Radio_Fragment"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/pause"
-        android:layout_marginStart="15dp"
-        android:id="@+id/stop"
-        android:layout_alignParentTop="true"
-        android:layout_toEndOf="@+id/play" />
-
-    <Button
-        android:text="5"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:id="@+id/station5"
-        android:layout_below="@+id/station1"
-        android:layout_alignStart="@+id/station2" />
-
-    <Button
-        android:text="2"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:id="@+id/station2"
-        android:layout_above="@+id/station5"
-        android:layout_toEndOf="@+id/station4" />
-
-    <Button
-        android:text="3"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:id="@+id/station3"
-        android:layout_above="@+id/station6"
-        android:layout_alignStart="@+id/station6" />
-
-    <Button
-        android:text="6"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:id="@+id/station6"
-        android:layout_alignBaseline="@+id/station5"
-        android:layout_alignBottom="@+id/station5"
-        android:layout_alignStart="@+id/stop" />
-
-    <Button
-        android:text="1"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="12dp"
-        android:id="@+id/station1"
-        android:layout_below="@+id/progressBar"
-        android:layout_alignEnd="@+id/progressBar" />
-
+        android:layout_alignParentStart="true"
+        android:id="@+id/fragment12"
+        tools:layout="@layout/auto_radio_fragment" />
 </RelativeLayout>
