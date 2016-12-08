@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <Switch
-        android:text="OFF/ON"
+        android:text="@string/LRswitch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -23,7 +23,7 @@
         android:layout_alignParentStart="true" />
 
     <TextView
-        android:text="Normal headlights"
+        android:text="@string/norm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/text_normal"
@@ -31,7 +31,7 @@
         android:layout_alignParentStart="true" />
 
     <TextView
-        android:text="High headlights"
+        android:text="@string/high"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/text_high"
@@ -48,7 +48,7 @@
         android:layout_alignParentStart="true" />
 
     <Switch
-        android:text="OFF/ON"
+        android:text="@string/LRswitch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="15dp"
@@ -76,7 +76,7 @@
         android:layout_toEndOf="@+id/car_light" />
 
     <TextView
-        android:text="Light inside the car"
+        android:text="@string/inside"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView19"

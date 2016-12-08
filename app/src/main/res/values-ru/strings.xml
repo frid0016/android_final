@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    //Living Room
+    <string name="LRswitch">ВЫКЛ/ВКЛ</string>
+    <string name="red">КРАС</string>
+    <string name="green">ЗЕЛ</string>
+    <string name="purple">ФИОЛ</string>
+    <string name="blue">ГОЛ</string>
+
+    <string name="ask_channel">Пожалуйста выберите канал:</string>
+    <string name="enter">УСТАНОВИТЬ</string>
+
+    <string name="closed">закрыто</string>
+    <string name="open">открыто</string>
+
+    //Automobile
+    <string name="navigator">Запуcтить навигатор</string>
+    <string name="ask_front_temp">Температура спереди:</string>
+    <string name="hint_front">передняя темп</string>
+    <string name="ask_back_temp">Температура сзади:</string>
+    <string name="hint_back">задняя темп</string>
+    <string name="set">УСТАНОВИТЬ</string>
+    <string name="norm">Норм фары</string>
+    <string name="high">Дальние фары</string>
+    <string name="inside">Свет внутри машины</string>
+    <string name="radio">Выберите радиостанцию</string>
+
+    <string name="how_far">Как далеко ехать?</string>
+    <string name="km_hint">сколько км</string>
+    <string name="save">Сохранить</string>
+    <string name="odometer">Одометр</string>
+    <string name="total_km">Всего км:</string>
+    <string name="reset">Сбросить</string>
+    <string name="level">Уровень топлива</string>
+    <string name="level_hint">уровень топлива</string>
+    <string name="est">Сколько можно проехать:</string>
+    <string name="fill">ЗАПОЛНИТЬ</string>
+</resources>
