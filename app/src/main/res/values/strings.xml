@@ -22,4 +22,10 @@
     <string name="htSetButton">Set</string>
     <string name="htHintEditText">enter number in °C</string>
     <string name="outsideWeatherTitle">Outside Weather</string>
+    <string name="car_text">"\n Author: Eduard Tikhomirov \n Version: 1 \n Instructions: \n Click on setting to see detailed controls.</string>
+    <string name="gps_text">"\n Author: Eduard Tikhomirov \n Version: 1 \n Instructions: \n Click to launch gps navigator.</string>
+    <string name="temp_text">"\n Author: Eduard Tikhomirov \n Version: 1 \n Instructions: \n Set temperature for front and back.</string>
+    <string name="lights_text">"\n Author: Eduard Tikhomirov \n Version: 1 \n Instructions: \n Turn on/off normal lights and headlights, set dimmable light.</string>
+    <string name="radio_text">"\n Author: Eduard Tikhomirov \n Version: 1 \n Instructions: \n Select the radio station and click play button.</string>
+    <string name="drive_text">"\n Author: Eduard Tikhomirov \n Version: 1 \n Instructions: \n Enter the driving information.</string>
 </resources>

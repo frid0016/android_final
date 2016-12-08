@@ -1,7 +1,10 @@
 package nineseven.groupproject;
 
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -12,11 +15,21 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.FrameLayout;
 import android.widget.ListView;
 
 public class AutomobileActivity extends AppCompatActivity {
     String[] Automobile = {"GPS", "Temperature", "Lights", "Radio", "Drive"};
     ListView listView;
+    FrameLayout container;
+    FragmentManager myFragmentManager = getFragmentManager();
+
+    Auto_Drive_Fragment ad = new Auto_Drive_Fragment();
+    Auto_GPS_Fragment ag = new Auto_GPS_Fragment();
+    Auto_Lights_Fragment al = new Auto_Lights_Fragment();
+    Auto_Radio_Fragment ar = new Auto_Radio_Fragment();
+    Auto_Temp_Fragment at = new Auto_Temp_Fragment();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +38,7 @@ public class AutomobileActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.automobile_Toolbar);
         setSupportActionBar(toolbar);
 
+        container = (FrameLayout) findViewById(R.id.container);
         listView = (ListView) findViewById(R.id.Automobile_List_View);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, Automobile);
         listView.setAdapter(adapter);
@@ -33,7 +47,10 @@ public class AutomobileActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
+                Configuration configuration = getResources().getConfiguration();
+                if(configuration.orientation == Configuration.ORIENTATION_PORTRAIT) {
                 switch (position) {
+
                     case 0:
                         Intent GPSIntent = new Intent(AutomobileActivity.this, GPSActivity.class);
                         startActivity(GPSIntent);
@@ -56,9 +73,83 @@ public class AutomobileActivity extends AppCompatActivity {
                         Intent driveIntent = new Intent(AutomobileActivity.this, DriveActivity.class);
                         startActivity(driveIntent);
                         break;
-
+                    }
                 }
+                else if (configuration.orientation == Configuration.ORIENTATION_LANDSCAPE) {
 
+                    switch (position) {
+                        case 0:
+                            Auto_GPS_Fragment ag2 = new Auto_GPS_Fragment();
+                            if (ag2 == null) {
+                                FragmentTransaction fragmentTransaction = myFragmentManager.beginTransaction();
+                                fragmentTransaction.add(R.id.container, ag);
+
+                                fragmentTransaction.commit();
+                            } else{
+                                FragmentTransaction fragmentTransaction = myFragmentManager.beginTransaction();
+                                fragmentTransaction.replace(R.id.container, ag);
+                                fragmentTransaction.addToBackStack(null);
+                                fragmentTransaction.commit();
+                            }
+                            break;
+                        case 1:
+                            Auto_Temp_Fragment at2 = new Auto_Temp_Fragment();
+                            if (at2 == null) {
+                                FragmentTransaction fragmentTransaction = myFragmentManager.beginTransaction();
+                                fragmentTransaction.add(R.id.container, at);
+
+                                fragmentTransaction.commit();
+                            } else{
+                                FragmentTransaction fragmentTransaction = myFragmentManager.beginTransaction();
+                                fragmentTransaction.replace(R.id.container, at);
+                                fragmentTransaction.addToBackStack(null);
+                                fragmentTransaction.commit();
+                            }
+                            break;
+                        case 2:
+                            Auto_Lights_Fragment al2 = new Auto_Lights_Fragment();
+                            if (al2 == null) {
+                                FragmentTransaction fragmentTransaction = myFragmentManager.beginTransaction();
+                                fragmentTransaction.add(R.id.container, al);
+
+                                fragmentTransaction.commit();
+                            } else{
+                                FragmentTransaction fragmentTransaction = myFragmentManager.beginTransaction();
+                                fragmentTransaction.replace(R.id.container, al);
+                                fragmentTransaction.addToBackStack(null);
+                                fragmentTransaction.commit();
+                            }
+                            break;
+                        case 3:
+                            Auto_Radio_Fragment ar2 = new Auto_Radio_Fragment();
+                            if (ar2 == null) {
+                                FragmentTransaction fragmentTransaction = myFragmentManager.beginTransaction();
+                                fragmentTransaction.add(R.id.container, ar);
+
+                                fragmentTransaction.commit();
+                            } else{
+                                FragmentTransaction fragmentTransaction = myFragmentManager.beginTransaction();
+                                fragmentTransaction.replace(R.id.container, ar);
+                                fragmentTransaction.addToBackStack(null);
+                                fragmentTransaction.commit();
+                            }
+                            break;
+                        case 4:
+                            Auto_Drive_Fragment ad2 = new Auto_Drive_Fragment();
+                            if (ad2 == null) {
+                                FragmentTransaction fragmentTransaction = myFragmentManager.beginTransaction();
+                                fragmentTransaction.add(R.id.container, ad);
+
+                                fragmentTransaction.commit();
+                            } else{
+                                FragmentTransaction fragmentTransaction = myFragmentManager.beginTransaction();
+                                fragmentTransaction.replace(R.id.container, ad);
+                                fragmentTransaction.addToBackStack(null);
+                                fragmentTransaction.commit();
+                            }
+                            break;
+                    }
+                }
             }
         });
     }
@@ -92,7 +183,7 @@ public class AutomobileActivity extends AppCompatActivity {
                 builder = new AlertDialog.Builder(this);
                 LayoutInflater inflater = this.getLayoutInflater();
                 builder.setTitle(R.string.dialog_help_title);
-                builder.setView(inflater.inflate(R.layout.dialog_house, null))
+                builder.setView(inflater.inflate(R.layout.dialog_car, null))
                         .setNegativeButton(R.string.dialog_help_button, new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
                                 // User clicked OK
