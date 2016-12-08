@@ -19,41 +19,59 @@ Description: Final Project
         android:text="@string/houseTemperatureTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView17"
+        android:id="@+id/htTitleTV"
         android:textAppearance="@style/TextAppearance.AppCompat.Button"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
         android:layout_marginStart="13dp"
         android:layout_marginTop="13dp" />
 
-    <TextView
-        android:text="@string/htSetTemperatureTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:layout_marginTop="26dp"
-        android:layout_below="@+id/textView17"
-        android:layout_alignStart="@+id/textView17" />
-
     <Button
         android:text="@string/htSetButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/htSetButton"
-        android:layout_marginTop="26dp"
-        android:layout_below="@+id/editText"
-        android:layout_alignStart="@+id/editText" />
+        android:layout_below="@+id/newTempValueET"
+        android:layout_alignStart="@+id/newTempValueET" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/curTempValueTV"
+        android:layout_below="@+id/curTempLabelTV"
+        android:layout_alignStart="@+id/curTempLabelTV"
+        android:layout_marginTop="11dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/curTempLabelTV"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:text="@string/htCurTempLabel"
+        android:layout_marginTop="22dp"
+        android:layout_below="@+id/htTitleTV"
+        android:layout_alignStart="@+id/htTitleTV" />
+
+    <TextView
+        android:text="@string/htNewTempLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/newTempLabelTV"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:layout_marginTop="49dp"
+        android:layout_below="@+id/curTempValueTV"
+        android:layout_alignStart="@+id/curTempValueTV" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="10"
-        android:id="@+id/editText"
+        android:id="@+id/newTempValueET"
         android:hint="@string/htHintEditText"
-        android:layout_below="@+id/textView"
-        android:layout_alignStart="@+id/textView"
-        android:layout_marginTop="11dp" />
+        android:layout_below="@+id/newTempLabelTV"
+        android:layout_alignStart="@+id/newTempLabelTV"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
 </RelativeLayout>

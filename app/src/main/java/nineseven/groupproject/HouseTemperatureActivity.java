@@ -8,8 +8,10 @@
 
 package nineseven.groupproject;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -18,12 +20,20 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 /**
  * This class extends AppCompatActivity and represents a house temperature activity.
  */
 public class HouseTemperatureActivity extends AppCompatActivity {
+
+    TextView curTempValueTV;
+    EditText newTempValueET;
+    Button htSetButton;
+    SharedPreferences sharedPreferences;
+    SharedPreferences.Editor editor;
 
     /**
      * This method initializes house temperature activity, sets layout, handles
@@ -35,12 +45,30 @@ public class HouseTemperatureActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_house_temperature);
 
-        Button htSetButton = (Button) findViewById(R.id.htSetButton);
+        curTempValueTV = (TextView) findViewById(R.id.curTempValueTV);
+        newTempValueET = (EditText) findViewById(R.id.newTempValueET);
+        htSetButton = (Button) findViewById(R.id.htSetButton);
+        sharedPreferences = getSharedPreferences("temperature", Context.MODE_PRIVATE);
+        editor = sharedPreferences.edit();
+        curTempValueTV.setText(sharedPreferences.getString("houseTemp", " "));
 
         htSetButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "House temperature has been set", Toast.LENGTH_LONG).show();
+            public void onClick(View v) {
+                try {
+                    if (Integer.parseInt(newTempValueET.getText().toString()) < 15
+                            || Integer.parseInt((newTempValueET.getText().toString())) > 25) {
+                        Toast.makeText(getApplicationContext(), "Enter a temperature between 15 and 25", Toast.LENGTH_LONG).show();
+                    } else {
+                        editor.putString("houseTemp", newTempValueET.getText().toString());
+                        editor.commit();
+                        curTempValueTV.setText(sharedPreferences.getString("houseTemp", " "));
+                        Toast.makeText(getApplicationContext(), "House temperature has been set", Toast.LENGTH_LONG).show();
+                    }
+                } catch (NumberFormatException e) {
+                    Toast.makeText(getApplicationContext(), "Enter a temperature between 15 and 25", Toast.LENGTH_LONG).show();
+                }
+                newTempValueET.setText("");
             }
         });
     } // end of method onCreate
