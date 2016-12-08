@@ -20,4 +20,13 @@
         android:layout_alignParentStart="true"
         android:id="@+id/fragment11"
         tools:layout="@layout/auto_drive_fragment" />
+
+    <CheckBox
+        android:text="CheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fragment11"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="15dp"
+        android:id="@+id/checkBox" />
 </RelativeLayout>
