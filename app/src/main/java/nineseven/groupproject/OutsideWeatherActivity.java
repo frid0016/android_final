@@ -245,4 +245,5 @@ public class OutsideWeatherActivity extends AppCompatActivity {
         } // end of method fileExistance
 
     } // end of inner class ForecastQuery
+
 } // end of class OutsideWeatherActivity
