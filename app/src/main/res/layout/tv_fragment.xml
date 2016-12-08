@@ -11,13 +11,13 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
-        android:id="@+id/switch3" />
+        android:id="@+id/tv_switch" />
 
     <TextView
         android:text="Please enter a channel:"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/switch3"
+        android:layout_below="@+id/tv_switch"
         android:layout_alignParentStart="true"
         android:id="@+id/odom_total"
         android:textAppearance="@style/TextAppearance.AppCompat" />
@@ -39,5 +39,5 @@
         android:layout_below="@+id/editText2"
         android:layout_toEndOf="@+id/odom_total"
         android:layout_marginTop="27dp"
-        android:id="@+id/button2" />
+        android:id="@+id/tv_button" />
 </LinearLayout>

@@ -15,6 +15,7 @@ import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.Switch;
+import android.widget.Toast;
 
 public class Lamp_Fragment extends Fragment {
 
@@ -58,6 +59,7 @@ public class Lamp_Fragment extends Fragment {
             public void onClick(View v) {
                 int color = Color.parseColor("#80008000"); //The color u want
                 imgView3.setColorFilter(color);
+                Toast.makeText(getActivity().getApplicationContext(), "Green light on", Toast.LENGTH_LONG).show();
             }
         });
 
@@ -65,6 +67,7 @@ public class Lamp_Fragment extends Fragment {
             public void onClick(View v) {
                 int color = Color.parseColor("#80ff0000"); //The color u want
                 imgView3.setColorFilter(color);
+                Toast.makeText(getActivity().getApplicationContext(), "Red light on", Toast.LENGTH_LONG).show();
             }
         });
 
@@ -72,6 +75,7 @@ public class Lamp_Fragment extends Fragment {
             public void onClick(View v) {
                 int color = Color.parseColor("#804793cb"); //The color u want
                 imgView3.setColorFilter(color);
+                Toast.makeText(getActivity().getApplicationContext(), "Red light on", Toast.LENGTH_LONG).show();
             }
         });
 
@@ -79,6 +83,7 @@ public class Lamp_Fragment extends Fragment {
             public void onClick(View v) {
                 int color = Color.parseColor("#80800080"); //The color u want
                 imgView3.setColorFilter(color);
+                Toast.makeText(getActivity().getApplicationContext(), "Purple light on", Toast.LENGTH_LONG).show();
             }
         });
 
@@ -89,10 +94,12 @@ public class Lamp_Fragment extends Fragment {
                 if(isChecked){
                     int color = Color.parseColor("#80ffff00"); //The color u want
                     imgView1.setColorFilter(color);
+                    Toast.makeText(getActivity().getApplicationContext(), "Standard light on", Toast.LENGTH_LONG).show();
                 }
                 else{
                     int color = Color.parseColor("#90000000");
                     imgView1.setColorFilter(color);
+                    Toast.makeText(getActivity().getApplicationContext(), "Standard light off", Toast.LENGTH_LONG).show();
                 }
 
             }
