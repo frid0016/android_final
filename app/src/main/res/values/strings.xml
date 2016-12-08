@@ -27,7 +27,7 @@
     <string name="car_text">"\n Author: Eduard Tikhomirov \n Version: 1 \n Instructions: \n Click on setting to see detailed controls.</string>
     <string name="gps_text">"\n Author: Eduard Tikhomirov \n Version: 1 \n Instructions: \n Click to launch gps navigator.</string>
     <string name="temp_text">"\n Author: Eduard Tikhomirov \n Version: 1 \n Instructions: \n Set temperature for front and back.</string>
-    <string name="lights_text">"\n Author: Eduard Tikhomirov \n Version: 1 \n Instructions: \n Turn on/off normal lights and headlights, set dimmable light.</string>
+    <string name="lights_text">"\n Author: Eduard Tikhomirov \n Version: 1 \n Instructions: \n Turn on/off normal and high headlights, set dimmable light.</string>
     <string name="radio_text">"\n Author: Eduard Tikhomirov \n Version: 1 \n Instructions: \n Select the radio station and click play button.</string>
     <string name="drive_text">"\n Author: Eduard Tikhomirov \n Version: 1 \n Instructions: \n Enter the driving information.</string>
 
@@ -71,10 +71,12 @@
     <string name="level_hint">fuel level</string>
     <string name="est">Estimated km car can drive:</string>
     <string name="fill">FILL TANK</string>
+
     <string name="kitchendialog">Author: Mahesh Bagde \n MICROWAVE: Enter the time by selecting any of the presented options and click START\n FRIDGE: Enter your desired temperature and click on Set\n LIGHT: Click on the ON/OFF switch to operate the light</string>
     <string name="kitchen_light_dialog">Author: Mahesh Bagde \n Click on the ON/OFF switch to operate the light</string>
     <string name="microwave_dialog">Author: Mahesh Bagde \n Enter the time by selecting any of the presented options and click START</string>
     <string name="fridge_dialog">Author: Mahesh Bagde \n Enter your desired temperature and click on Set</string>
+
     <string name="plus_10_mins_button">+ 10 mins</string>
     <string name="plus_1_minute_button">+ 1 min</string>
     <string name="plus_5_secs_button">+ 5 secs</string>

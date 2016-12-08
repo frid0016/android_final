@@ -6,6 +6,7 @@
     <string name="green">ЗЕЛ</string>
     <string name="purple">ФИОЛ</string>
     <string name="blue">ГОЛ</string>
+    <string name="dialog_help_title">Помощь</string>
 
     <string name="ask_channel">Пожалуйста выберите канал:</string>
     <string name="enter">УСТАНОВИТЬ</string>
@@ -51,24 +52,43 @@
     <string name="htSetButton">Установить</string>
     <string name="htHintEditText">15 - 25 °C промежуток</string>
     <string name="outsideWeatherTitle">Погода на улице</string>
-    <string name="kitchendialog">Author: Mahesh Bagde \n MICROWAVE: Enter the time by selecting any of the presented options and click START\n FRIDGE: Enter your desired temperature and click on Set\n LIGHT: Click on the ON/OFF switch to operate the light</string>
-    <string name="kitchen_light_dialog">Author: Mahesh Bagde \n Click on the ON/OFF switch to operate the light</string>
-    <string name="microwave_dialog">Author: Mahesh Bagde \n Enter the time by selecting any of the presented options and click START</string>
-    <string name="fridge_dialog">Author: Mahesh Bagde \n Enter your desired temperature and click on Set</string>
-    <string name="plus_10_mins_button">+ 10 mins</string>
-    <string name="plus_1_minute_button">+ 1 min</string>
-    <string name="plus_5_secs_button">+ 5 secs</string>
-    <string name="defrost_button">DEFROST</string>
-    <string name="bake_button">BAKE</string>
-    <string name="quick_30_button">QUICK 30</string>
-    <string name="stop_button">STOP</string>
-    <string name="reset_button">RESET</string>
-    <string name="start_button">START</string>
-    <string name="current_freezer_temperature">Current Freezer Temperature</string>
-    <string name="new_freezer_temperature">New Freezer Temperature</string>
-    <string name="set_freezer_button">Set</string>
-    <string name="current_fridge_temperature">Current Fridge Temperature</string>
-    <string name="new_fridge_temperature">New Fridge Temperature</string>
-    <string name="set_fridge_button">Set</string>
-    <string name="on_off_switch">ON / OFF</string>
+
+    <string name="kitchendialog">Автор: Махеш Бейдж \n МИКРОВОЛНОВКА: Выберите нужную опцию и нажмите СТАРТ\n ХОЛОДИЛЬНИК: Введите температуру и нажмите Установить\n СВЕТ: Нажмите ВКЛ/ВЫКЛ чтобы изменить свет</string>
+    <string name="kitchen_light_dialog">Автор: Махеш Бейдж \n Нажмите ВКЛ/ВЫКЛ чтобы изменить свет</string>
+    <string name="microwave_dialog">Автор: Махеш Бейдж \n Выберите нужную опцию и нажмите СТАРТ</string>
+    <string name="fridge_dialog">Автор: Махеш Бейдж \n Введите температуру и нажмите Установить</string>
+
+    <string name="lr_text">"\n Автор: Анастасия Фридрикова \n Версия: 1 \n Инструкция: \n Выберите что-то дальше.</string>
+    <string name="lamp_text">"\n Автор: Анастасия Фридрикова \n Версия: 1 \n Инструкция: \n Вкл/выкл стандартный свет, меняющийся свет и разноцветный свет</string>
+    <string name="tv_text">"\n Автор: Анастасия Фридрикова \n Версия: 1 \n Инструкция: \n Вкл/выкл телевизор и выбрать канал.</string>
+    <string name="blinds_text">"\n Автор: Анастасия Фридрикова \n Версия: 1 \n Инструкция: \n Выбрать позицию штор</string>
+
+    <string name="car_text">"\n Автор: Эдуард Тихомиров \n Версия: 1 \n Инструкция: \n Выберите что-то дальше.</string>
+    <string name="gps_text">"\n Автор: Эдуард Тихомиров \n Версия: 1 \n Инструкция: \n Нажмите и включите навигатор.</string>
+    <string name="temp_text">"\n Автор: Эдуард Тихомиров \n Версия: 1 \n Инструкция: \n Установите температуру спереди и сзади.</string>
+    <string name="lights_text">"\n Автор: Эдуард Тихомиров \n Версия: 1 \n Инструкция: \n Вкл/выкл стандартные или дальние фары, и свет внутри</string>
+    <string name="radio_text">"\n Автор: Эдуард Тихомиров \n Версия: 1 \n Инструкция: \n Выберите радиостанцию и нажмите воспроизвести</string>
+    <string name="drive_text">"\n Автор: Эдуард Тихомиров  \n Версия: 1 \n Инструкция: \n Введите информацию</string>
+
+    <string name="dialog_house_text">"\n Автор: Майкл Палмер \n Версия: 1 \n Инструкция: \n Выберите что-то дальше.</string>
+    <string name="dialog_garage_text">"\n Автор: Майкл Палмер \n Версия: 1 \n Инструкция: \n Нажмите 'ВЫКЛ' чтобы выключить свет в гараже. \n Нажмите 'ВКЛ' чтобы выключить свет в гараже. \n Нажмите 'ОТКРЫТЬ' чтобы открыть дверь. \n Нажмите 'ЗАКРЫТЬ' чтобы закрыть дверь.</string>
+    <string name="dialog_house_temperature_text">"\n Автор: Майкл Палмер \n Версия: 1 \n Инструкция: \n Нажмите 'УСТАНОВИТЬ' и введите температуру</string>
+    <string name="dialog_outside_weather_text">"\n Автор: Майкл Палмер \n Версия: 1 \n Инструкция: \n Полоска показывает процесс загрузки погоды \n Минимальная, максимальная и температура в данный момент загружаются</string>
+
+    <string name="plus_10_mins_button">+ 10 мин</string>
+    <string name="plus_1_minute_button">+ 1 мин</string>
+    <string name="plus_5_secs_button">+ 5 сек</string>
+    <string name="defrost_button">РАЗМОР</string>
+    <string name="bake_button">ВЫПЕЧ</string>
+    <string name="quick_30_button">БЫСТ 30</string>
+    <string name="stop_button">СТОП</string>
+    <string name="reset_button">СБРОС</string>
+    <string name="start_button">СТАРТ</string>
+    <string name="current_freezer_temperature">Температура морозильника сейчас:</string>
+    <string name="new_freezer_temperature">Новая температура морозильника</string>
+    <string name="set_freezer_button">УСТ</string>
+    <string name="current_fridge_temperature">Температура холодильника сейчас:</string>
+    <string name="new_fridge_temperature">Новая температура холодильника</string>
+    <string name="set_fridge_button">УСТ</string>
+    <string name="on_off_switch">ВКЛ / ВЫКЛ</string>
 </resources>
