@@ -36,6 +36,8 @@
     <string name="tv_text">"\n Author: Anastasia Fridrikova \n Version: 1 \n Instructions: \n Turn off/on TV and select a channel.</string>
     <string name="blinds_text">"\n Author: Anastasia Fridrikova \n Version: 1 \n Instructions: \n Select blinds position.</string>
 
+    <string name="launch_text">"\n Authors: Michael Palmer, Anastasia Fridrikova, Eduard Tikhomirov, Mahesh Badge \n Version: 1 \n Instructions: \n Select activity</string>
+
     //Living Room
     <string name="LRswitch">OFF/ON</string>
     <string name="red">RED</string>

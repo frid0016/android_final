@@ -75,6 +75,8 @@
     <string name="dialog_house_temperature_text">"\n Автор: Майкл Палмер \n Версия: 1 \n Инструкция: \n Нажмите 'УСТАНОВИТЬ' и введите температуру</string>
     <string name="dialog_outside_weather_text">"\n Автор: Майкл Палмер \n Версия: 1 \n Инструкция: \n Полоска показывает процесс загрузки погоды \n Минимальная, максимальная и температура в данный момент загружаются</string>
 
+    <string name="launch_text">"\n Авторы: Майкл Палмер, Анастасия Фридрикова, Эдуард Тихомиров, Махеш Бейдж \n Версия: 1 \n Инструкция: \n Выберите активити </string>
+
     <string name="plus_10_mins_button">+ 10 мин</string>
     <string name="plus_1_minute_button">+ 1 мин</string>
     <string name="plus_5_secs_button">+ 5 сек</string>
