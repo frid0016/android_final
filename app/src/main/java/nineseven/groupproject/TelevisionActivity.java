@@ -1,7 +1,9 @@
 package nineseven.groupproject;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -13,11 +15,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.Switch;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class TelevisionActivity extends AppCompatActivity {
     Switch tv;
     Button enter;
+    TextView channel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,12 +30,27 @@ public class TelevisionActivity extends AppCompatActivity {
 
         enter = (Button) findViewById(R.id.tv_button);
         tv = (Switch) findViewById(R.id.tv_switch);
+        channel = (TextView) findViewById(R.id.channel);
 
         enter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                try {
+                    if (Integer.parseInt(channel.getText().toString()) < 1) {
+                        Snackbar.make(view, "Enter valid number", Snackbar.LENGTH_LONG)
+                                .setAction("Action", null).show();
+                    } else {
+                        SharedPreferences shared = getSharedPreferences("TV channel", Context.MODE_PRIVATE);
+                        SharedPreferences.Editor editor_tv = shared.edit();
+                        editor_tv.putString("Channel", channel.getText().toString());
+                        editor_tv.commit();
                 Snackbar.make(view, "Channel entered", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+                    }
+                } catch (NumberFormatException e) {
+                    Snackbar.make(view,  "Please enter the channel", Snackbar.LENGTH_LONG)
+                            .setAction("Action", null).show();
+                }
             }
         });
 
@@ -48,6 +67,35 @@ public class TelevisionActivity extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    protected void onResume(){
+        super.onResume();
+    }
+
+    @Override
+    protected void onStart(){
+        super.onStart();
+        SharedPreferences shared = getSharedPreferences("TV channel", Context.MODE_PRIVATE);
+        channel.setText( shared.getString("Channel", "1-10"));
+
+    }
+
+    @Override
+    protected void onPause(){
+        super.onPause();
+    }
+
+    @Override
+    protected void onStop(){
+        super.onStop();
+    }
+
+    @Override
+    protected void onDestroy(){
+        super.onDestroy();
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_launch_screen, menu);

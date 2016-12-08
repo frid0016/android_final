@@ -24,7 +24,7 @@ public class Auto_Radio_Fragment extends Fragment {
     String url = "http://powerhitz.powerhitz.com:5040/";
     String url5 = "http://109.71.41.250:8086";
     String url3 = "http://usa1-vn.mixstream.net:9172/";
-    String url4 = "http://rs1.radiostreamer.com:8270/";
+    String url4 = "http://server2.crearradio.com:8371";
     String url6 = "http://96.31.90.115:8230";
 
     @Override
