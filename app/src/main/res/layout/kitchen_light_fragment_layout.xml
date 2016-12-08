@@ -25,7 +25,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:shadowColor="#000000"
-            android:text="ON / OFF"
+            android:text="@string/on_off_switch"
             android:switchTextAppearance="@style/TextAppearance.AppCompat.Headline"
             android:textAppearance="@style/TextAppearance.AppCompat.Button"
             android:gravity="center"

@@ -17,7 +17,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:text=" Current Freezer Temperature"
+            android:text="@string/current_freezer_temperature"
             android:textStyle="bold" />
 
         <TextView
@@ -41,7 +41,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="4"
-            android:text=" New Freezer Temperature"
+            android:text="@string/new_freezer_temperature"
             android:textStyle="bold" />
 
         <EditText
@@ -57,7 +57,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Set"
+            android:text="@string/set_freezer_button"
             android:textAppearance="@android:style/TextAppearance.Material.Small"
             android:textColor="#00BFFF"
             android:textStyle="bold" />
@@ -76,7 +76,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:text=" Current Fridge Temperature"
+            android:text="@string/current_fridge_temperature"
             android:textStyle="bold" />
 
         <TextView
@@ -100,7 +100,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="4"
-            android:text=" New Fridge Temperature"
+            android:text="@string/new_fridge_temperature"
             android:textStyle="bold" />
 
         <EditText
@@ -117,7 +117,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Set"
+            android:text="@string/set_fridge_button"
             android:textAppearance="@android:style/TextAppearance.Material.Small"
             android:textColor="#00BFFF"
             android:textStyle="bold" />
