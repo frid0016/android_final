@@ -35,4 +35,20 @@
     <string name="level_hint">уровень топлива</string>
     <string name="est">Сколько можно проехать:</string>
     <string name="fill">ЗАПОЛНИТЬ</string>
+
+    //House
+    <string name="garageDoorTitle">Гараж</string>
+    <string name="gdCloseButton">Закрыть</string>
+    <string name="gdStopButton">Стоп</string>
+    <string name="gdOpenButton">Открыть</string>
+    <string name="gdOpenedTextView">Открыто</string>
+    <string name="gdClosedTextView">Закрыто</string>
+    <string name="garageLightTitle">Свет в гараже</string>
+    <string name="glSwitchText">ВЫКЛ / ВКЛ</string>
+    <string name="houseTemperatureTitle">Температура дома</string>
+    <string name="htCurTempLabel">Температура сейчас: </string>
+    <string name="htNewTempLabel">Введите температуру: </string>
+    <string name="htSetButton">Установить</string>
+    <string name="htHintEditText">15 - 25 °C промежуток</string>
+    <string name="outsideWeatherTitle">Погода на улице</string>
 </resources>
